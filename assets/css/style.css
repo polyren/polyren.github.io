@@ -256,7 +256,7 @@ form {
     height: 162px;
     transition: all 0.3s cubic-bezier(.2,.47,.51,.82);
     /*transition-timing-function: cubic-bezier(.2,.47,.51,.82);*/
-    background-size: 120%;
+    background-size: 110%;
     background-position: center;
     background-repeat: no-repeat;
     pointer-events: auto;
@@ -264,7 +264,7 @@ form {
     border: 1px solid #cecece;
 }
 .trumbnail:hover {
-  background-size: 125%;
+  background-size: 115%;
 }
 
 
