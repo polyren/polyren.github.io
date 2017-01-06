@@ -37,12 +37,6 @@
     padding-top: 15px;
     padding-bottom: 50px;
 }
-@media (max-width: 600px){
-	.main-content{
-/*		margin: 45px auto;
-		padding: 0 25px;*/
-	}
-}
 
 /*-------------------
 	All projects Page
@@ -215,16 +209,7 @@ form {
     display:block;
 }
 
-@media (max-height: 620px){
-	.download{
-		display: none;
-	}
-}
-@media (max-height: 370px){
-	.lang, .outlink{
-		display: none;
-	}
-}
+
 /*  Projects List   */
 .all-projects {
     opacity: 0;
@@ -281,23 +266,8 @@ form {
   background-size: 100%;
 }
 
-@media only screen and (max-width: 980px) {
-    .trumbnail{
-    width: 55vw;
-    height: 25vw;
-    }
-}
-@media only screen and (min-width: 1024px ) {
-    .trumbnail{
-    width: 30vw;
 
-    }
-}
-@media only screen and (min-width: 1306px ) {
-    .trumbnail{
-    width: 22vw;
-    }
-}
+
 /* The Project name */
 .projects-list h3{
     text-transform: uppercase;
@@ -446,19 +416,6 @@ form {
     position: relative;
     z-index: 1;
 }
-@media only screen and (max-width: 560px ) {
-    .close{
-    position: fixed;
-    width: 96%;
-    margin-left: -50%;
-    bottom: 0px;
-    top:auto;
-    background-color: rgba(255,255,255,0.8);
-    }
-    .footer{
-        padding-bottom: 6rem;
-    }
-}
 .subtitle2{
     padding-top: 15px;
     padding-bottom: 30px;
@@ -480,4 +437,49 @@ form {
 
 .outlink2 img{
     fill:#404040;
+}
+
+/* FOR MOBILE DEVICES*/
+/* Source for different devices http://cssmediaqueries.com/target/ */
+
+@media (max-height: 620px){
+    .download{
+        display: none;
+    }
+}
+@media (max-height: 370px){
+    .lang, .outlink{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .trumbnail{
+    width: 55vw;
+    height: 25vw;
+    }
+}
+@media screen and (min-width: 1024px ) {
+    .trumbnail{
+    width: 30vw;
+
+    }
+}
+@media screen and (min-width: 1306px ) {
+    .trumbnail{
+    width: 23vw;
+    }
+}
+@media only screen and (max-width: 560px ) {
+    .close{
+    position: fixed;
+    width: 96%;
+    margin-left: -50%;
+    bottom: 0px;
+    top:auto;
+    background-color: rgba(255,255,255,0.8);
+    }
+    .footer{
+        padding-bottom: 6rem;
+    }
 }
