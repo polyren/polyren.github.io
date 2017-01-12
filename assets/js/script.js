@@ -2,8 +2,75 @@ var app = app || {};
 app.main = (function() {
 	var projects = [],
 		filters = {};
+
 	var checkboxes = $('.checklist');
 
+//* slider bar *//
+	var slideCount = $('#slider ul li').length;
+	var slideWidth = $('#slider ul li').width();
+	var slideHeight = $('#slider ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	$('#slider').css({ width: slideWidth, height: slideHeight });
+	
+	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 200, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+//* switch button *//
+	'use strict';
+
+	var switchButton 			= document.querySelector('.switch-button');
+	var switchBtnRight 			= document.querySelector('.switch-button-case.right');
+	var switchBtnLeft 			= document.querySelector('.switch-button-case.left');
+	var activeSwitch 			= document.querySelector('.active');
+
+	function switchLeft(){
+		switchBtnRight.classList.remove('active-case');
+		switchBtnLeft.classList.add('active-case');
+		activeSwitch.style.left 						= '0%';
+	}
+
+	function switchRight(){
+		switchBtnRight.classList.add('active-case');
+		switchBtnLeft.classList.remove('active-case');
+		activeSwitch.style.left 						= '50%';
+	}
+
+	switchBtnLeft.addEventListener('click', function(){
+		switchLeft();
+	}, false);
+
+	switchBtnRight.addEventListener('click', function(){
+		switchRight();
+	}, false);
+
+
+//* main events *//
 	function attachEvents() {
 		$('.close').click(function (e) {
 			e.preventDefault();
