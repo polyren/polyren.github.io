@@ -106,6 +106,8 @@ form {
   margin: 20px auto 0 auto;
   font-size: 18px;
   font-family: "Times New Roman", Times, serif;
+    -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
   color:#4d4d4d;
   letter-spacing:2px;
   opacity: 1;
@@ -182,7 +184,7 @@ a.control_next {
 .switch-button-case {
   display: inline-block;
   background: none;
-  width: 49%;
+  width: 44%;
   height: 100%;
   color:#afafaf;
   position: relative;
@@ -191,9 +193,11 @@ a.control_next {
   transition: .3s ease all;
   text-transform: uppercase;
   padding-bottom: 0px;
-  font-size: 5px;
+  font-size:10px;
   font-family: "Times New Roman", Times,serif;
-  /*color:#4d4d4d;*/
+  /*-webkit-text-size-adjust: none;*/
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
   letter-spacing:1px;
 }
 .switch-button-case:hover {
@@ -296,6 +300,8 @@ a.control_next {
     text-align:left;
     font:normal 14px ;
     font-family: "Times New Roman", Times,serif;
+      -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
     color:#4d4d4d;
     margin: 0 12px 0px 0;
     padding: 20px 10px;
@@ -390,6 +396,8 @@ a.control_next {
     font-size:22px;
     font:normal 20px ;
     font-family: "Times New Roman", Times,serif;
+      -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
     color:#5b5b5b;
     font-weight:100;
     letter-spacing: 4px;
@@ -403,6 +411,8 @@ a.control_next {
     font-size:16px;
     font:normal 20px ;
     font-family: "Times New Roman", Times,serif;
+      -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
     color:#969696;
     font-weight:100;
     letter-spacing: 3px;
@@ -415,6 +425,8 @@ a.control_next {
     font-size:16px;
     font:normal 16px ;
     font-family: "Times New Roman", Times,serif;
+      -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
     color:#5b5b5b;
     font-weight:100;
     letter-spacing: 1px;
@@ -427,6 +439,8 @@ a.control_next {
     font:normal 14px ;
     font-size:16px;
     font-family: "Times New Roman", Times,serif;
+      -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
     color:#5b5b5b;
     margin-bottom: 20px;
     padding-top: 30px;
@@ -462,6 +476,8 @@ a.control_next {
     cursor: pointer;
     font-weight: 100;
     font-family:"Times New Roman", Times, serif;
+      -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
     border-width: 1px;
     color:#cccccc;
 }
@@ -510,6 +526,8 @@ a.control_next {
   font-size:16px;
   color:#5b5b5b;
   font-family: "Times New Roman", Times,serif;
+    -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
   font-weight:100;
   letter-spacing: 4px;
   margin-bottom: 2rem;
@@ -518,6 +536,8 @@ a.control_next {
   font-size:13px;
   color:#5b5b5b;
   font-family: "Times New Roman", Times,serif;
+    -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
   font-weight:100;
   letter-spacing: 1px;
   margin-top: 1rem;
