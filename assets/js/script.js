@@ -6,31 +6,31 @@ app.main = (function() {
 	var checkboxes = $('.checklist');
 
 //* slider bar *//
-	var slideCount = $('#slider ul li').length;
-	var slideWidth = $('#slider ul li').width();
-	var slideHeight = $('#slider ul li').height();
+	var slideCount = $('.slider ul li').length;
+	var slideWidth = $('.slider ul li').width();
+	var slideHeight = $('.slider ul li').height();
 	var sliderUlWidth = slideCount * slideWidth;
-	$('#slider').css({ width: slideWidth, height: slideHeight });
+	$('.slider').css({ width: slideWidth, height: slideHeight });
 	
-	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	$('.slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
 	
-    $('#slider ul li:last-child').prependTo('#slider ul');
+    $('.slider ul li:last-child').prependTo('.slider ul');
 
     function moveLeft() {
-        $('#slider ul').animate({
+        $('.slider ul').animate({
             left: + slideWidth
         }, 200, function () {
-            $('#slider ul li:last-child').prependTo('#slider ul');
-            $('#slider ul').css('left', '');
+            $('.slider ul li:last-child').prependTo('.slider ul');
+            $('.slider ul').css('left', '');
         });
     };
 
     function moveRight() {
-        $('#slider ul').animate({
+        $('.slider ul').animate({
             left: - slideWidth
         }, 200, function () {
-            $('#slider ul li:first-child').appendTo('#slider ul');
-            $('#slider ul').css('left', '');
+            $('.slider ul li:first-child').appendTo('.slider ul');
+            $('.slider ul').css('left', '');
         });
     };
 
@@ -76,17 +76,47 @@ app.main = (function() {
 			e.preventDefault();
 			window.location.hash = '#';
 		});
+		// For 'About' button
+		$('.abt').click(function (e) {
+			e.preventDefault();
+			window.location.hash = '#about';
+		});
+
+		$('.port').click(function (e) {
+			e.preventDefault();
+			window.location.hash = '#';
+		});
+
+		$('.yearselect2').on('click',function(){
+			var that=$('.slider ul li:eq(0)');
+			year = that.attr('name');
+			filters[year] = [];
+			filters[year].push(that.data("value"));
+			createQueryHash(filters); 
+			console.log(filters);
+		});      
+		$('.yearselect1').on('click',function(){
+			var that=$('.slider ul li:eq(2)');
+			year = that.attr('name');
+			filters[year] = [];
+			filters[year].push(that.data("value"));
+			createQueryHash(filters); 
+			console.log(filters);
+		});      
 
 		$('.checklist').on('click', function(){
 	        var $$ = $(this)
 	        cat = $$.attr('name');
+	        
+	        
 	        if( !$$.is('.checked')){
 	            $$.addClass('checked');
            		$(this).find(".dot img").attr('src',"assets/images/web_elements/circle_select.svg");
            		if(!(filters[cat] && filters[cat].length)){
 					filters[cat] = [];
-				}
-				filters[cat].push($$.data("value"));           						
+				}	
+				filters[cat].push($$.data("value")); 
+     						
 				createQueryHash(filters);
 	        } else {
 	            $$.removeClass('checked');
@@ -99,7 +129,7 @@ app.main = (function() {
 					if(!filters[cat].length){
 						delete filters[cat];
 					}
-				}				
+				}			
 				createQueryHash(filters);	            
 	        }
 	  	  });
@@ -119,13 +149,16 @@ app.main = (function() {
 				// Clear the filters object, uncheck all checkboxes, show all the students
 				filters = {};
 				checkboxes.prop('checked',false);
-
 				renderProjectsPage(projects);
+			},
+			'#about': function() {
+				$('.main-content .page').addClass('visible');
+				renderAboutPage();
 			},
 			'#category': function() {
 				// Get the index of which project we want to show and call the appropriate function.
 				var index = url.split('#category/')[1].trim();
-				console.log(index);
+				// console.log(index);
 				renderSingleProjectPage(index, projects);
 			},
 
@@ -196,11 +229,12 @@ app.main = (function() {
 	function generateAllProjectsHTML(data) {
 
 		var list = $('.all-projects .projects-list');
-
 		var source = $("#projects-template").html();
 		//Compile the template​
 		var template = Handlebars.compile(source);
 		list.append (template(data));
+
+
 
 		// Each students has a data-index attribute.
 		// On click change the url hash to open up a preview for this project only.
@@ -210,6 +244,18 @@ app.main = (function() {
 			var studentIndex = $(this).data('index');
 			window.location.hash = 'category/' + studentIndex;
 		})
+	}
+
+	function renderAboutPage(){
+		var page = $('.about');
+		allprojects = $('.all-projects .projects-list > li');
+		allprojects.addClass('hidden');
+		$('.single-project').removeClass('visible');
+		page.addClass('visible');
+		$('.slider').addClass('hidden');
+		$('.filter-criteria').addClass('hidden');
+		$('.contact').addClass('visible');
+
 	}
 	/*------------------------------------------------*/
 	// Iterate through the students object & Make the students page visible
@@ -238,6 +284,9 @@ app.main = (function() {
 		// Show the page itself.
 		// (the render function hides all pages so we need to show the one we want).
 		page.addClass('visible');
+		$('.slider').removeClass('hidden');
+		$('.filter-criteria').removeClass('hidden');
+		$('.contact').removeClass('visible');
 	}
 	/*------------------------------------------------*/
 	// Pop-up the project detail
@@ -274,7 +323,7 @@ app.main = (function() {
 	function renderFilterResults(filters, projects){
 
 			// This array contains all the possible filter criteria.
-		var criteria = ['category'],
+		var criteria = ['year','category'],
 			results = [],
 			isFiltered = false;
 			
@@ -311,10 +360,10 @@ app.main = (function() {
 						// If the project has the same specification value as the one in the filter
 						// push it inside the results array and mark the isFiltered flag true.
 						
-						console.log(filter);
+						console.log(filter);	
 
 						if(typeof item.project[c] == 'string'){
-							console.log('1');
+							// console.log('1');
 							if(item.project[c].toLowerCase().indexOf(filter) != -1){
 								results.push(item);
 								isFiltered = true;
