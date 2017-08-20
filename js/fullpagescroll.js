@@ -38,7 +38,6 @@ $(document).ready(function() {
         $('#scene').fullpage({
             anchors:homepagedotsanchors,
             menu:'#homepageMenu',
-            css3: true
         });
         
         

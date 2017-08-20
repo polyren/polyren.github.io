@@ -687,10 +687,6 @@ body{
         margin-top: 1vh;
         width: 0vw;
         height: 0vh;
-/*
-        top:22vh;
-        left:20vw;
-*/
     }
     .cover,.cover-shadow{
         position: fixed;
@@ -706,10 +702,11 @@ body{
         background-color: #ed403a;
     }
     .main-sect{
+
         overflow: hidden;
         padding: 48px;
-        margin-left: 15vw;
-        margin-top: 8vh;
+        margin-left: 13vw;
+        margin-top: 1vh;
         width: 20rem;
         height: 18rem;
         background-color: aliceblue;
