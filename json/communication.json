@@ -1,0 +1,51 @@
+[
+    {
+        "id":1,
+        "name":"Xun Xiang",
+        "image":"./images/demo1.jpg",
+        "catlog":"Social activity design",
+        "year":"2014"      
+    },
+    {
+        "id":2,
+        "name":"illustration&painting",
+        "image":"./images/demo2.jpg",
+        "catlog":"illustration",
+        "year":"2011"      
+    },
+    {
+        "id":3,
+        "name":"font design",
+        "image":"./images/demo3.jpg",
+        "catlog":"font",
+        "year":"2012"      
+    },
+    {
+        "id":4,
+        "name":"VI design",
+        "image":"./images/demo3.jpg",
+        "catlog":"vi",
+        "year":"2013"      
+    },
+    {
+        "id":5,
+        "name":"Package design",
+        "image":"./images/demo3.jpg",
+        "catlog":"package",
+        "year":"2014"      
+    },
+    {
+        "id":6,
+        "name":"Stop motion animation",
+        "image":"./images/demo3.jpg",
+        "catlog":"animation",
+        "year":"2012"      
+    },
+    {
+        "id":7,
+        "name":"movie&film shooting",
+        "image":"./images/demo3.jpg",
+        "catlog":"film",
+        "year":"2014"      
+    }   
+]

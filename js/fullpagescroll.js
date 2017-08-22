@@ -2,22 +2,40 @@ $(document).ready(function() {
     loadData();      
 });
 
-    var projects=[]; 
+    var homeprojects=[]; 
     var homepagedotsanchors=[];
+    var programprojects=[];
+    var commprojects=[];
     function loadData(){
         $.getJSON("./json/homepage.json", function(data){
-            console.log( "success" );
-            projects=data;
-            generateAllProjectsHTML(projects);
+            console.log( "homepagesuccess" );
+            homeprojects=data;
+            generatehomeProjectsHTML(homeprojects);
         })
         .fail(function(){
-            console.log("failed");
+            console.log("homepagefailed");
         });
         
-
+        $.getJSON("./json/program.json", function(data){
+            console.log( "programsuccess" );
+            programprojects=data;
+            generateprogramProjectsHTML(programprojects);
+        })
+        .fail(function(){
+            console.log("programfailed");
+        });
+        
+        $.getJSON("./json/communication.json", function(data){
+            console.log( "commsuccess" );
+            commprojects=data;
+            generatecommProjectsHTML(commprojects);
+        })
+        .fail(function(){
+            console.log("commfailed");
+        });    
     }
     
-    function generateAllProjectsHTML(data){
+    function generatehomeProjectsHTML(data){
         
         var homepagelist=$('.homepage');
         var homepagedotlist=$('#homepageMenu');
@@ -28,7 +46,7 @@ $(document).ready(function() {
         homepagelist.append(template(data));
         homepagedotlist.append(template2(data));
         
-        var homeprojectcont= projects.length; 
+        var homeprojectcont= homeprojects.length; 
         for( i=homeprojectcont-homeprojectcont;i <= (homeprojectcont);i++){
             homepagedotsanchors[i]="page"+(i+1)+"dot";
         }
@@ -38,9 +56,7 @@ $(document).ready(function() {
         $('#scene').fullpage({
             anchors:homepagedotsanchors,
             menu:'#homepageMenu',
-        });
-        
-        
+        });   
 
         var checkoutbar = $('.check-out');
         var checkoutback = $('.check-out-back');      
@@ -49,6 +65,19 @@ $(document).ready(function() {
         })
     }
 
+    function generateprogramProjectsHTML(data){
+        var programnamelist=$('#program-list');
+        var programnames=$('#programs').html();
+        var pronametemplate=Handlebars.compile(programnames);
+        programnamelist.append(pronametemplate(data));            
+    }
+
+    function generatecommProjectsHTML(data){
+        var commnamelist=$('#comm-list');
+        var commnames=$('#comms').html();
+        var commtemplate=Handlebars.compile(commnames);
+        commnamelist.append(commtemplate(data));            
+    }
     
         
 

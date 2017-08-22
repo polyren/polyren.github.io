@@ -16,9 +16,63 @@
         <tag class="part-1"></tag>
         <tag class="part-2"></tag>
         <tag class="part-3"></tag>
-    </div>                              
+    </div> 
+    <div id="red-bg"></div>
+    <div id="transparent-bg"></div>
+    <div class="mainmenu-text">
+        <div class="brief" type="display: none">
+            <p>
+                <spam style="font-weight:bold">Homepage</spam>
+                <spam >is for curent projects</spam>
+            </p>
+            <p>
+                <spam style="font-weight:bold">Projects</spam>
+                <spam >is for exploring more</spam>
+            </p>
+            <p>
+                <spam style="font-weight:bold">Resume</spam>
+                <spam >is for the one who want<br /> to work with me</spam>
+            </p>
+        </div>
+        <div class="mainmenu-big">
+            <p id="projects">
+                <span class="blue-num" >01</span><br />
+                <span style="font-weight:bold">Projects</span>
+            </p>
+            <p id="resume">
+                <span class="blue-num" >02</span><br />
+                <span style="font-weight:bold">Resume</span>
+            </p>
+            <p id="homepage">
+                <span class="blue-num" >03</span><br />
+                <span style="font-weight:bold">Homepage</span>
+            </p>
+        </div>
+        <div class="mainmenu-program">
+            <div class="menu-line"></div>
+            <p id="program-title">Programing & Games</p>
+            <ul id="program-list">
+                <script id="programs" type="x-handlebars-template">
+                    {{#each this}}     
+                        <li  class="programs-names">{{name}}</li>
+                    {{/each}}  
+                </script>
+            </ul>
+        </div>
+        <div class="mainmenu-comm">
+            <div class="menu-line"></div>
+            <p id="comm-title">Communication Design</p>
+            <ul id="comm-list">
+                <script id="comms" type="x-handlebars-template">
+                    {{#each this}}     
+                        <li  class="comm-names">{{name}}</li>
+                    {{/each}}  
+                </script>
+            </ul>
+        </div> 
+    </div>
     <div class="emailbar" >
-        <img id="emailadd" height="200px"  src="svg/gmailadd.svg" pointer-events="none">
+        <img id="emailadd" height="150px"  src="svg/gmailadd.svg" pointer-events="none">
         <tag class="gmailback"></tag>
         <tag  class="eangle"></tag>
     </div>
@@ -107,6 +161,7 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery.svg.js "></script>
     <script src="js/jquery.svganim.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/jquery.gsap.min.js "></script>
     <script src="js/fullpagescroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js "></script>  
         <script id="homepage-template" type="x-handlebars-template">
@@ -131,6 +186,7 @@
     </script>
     <script src="js/jquery.fullpage.js"></script>
     <script src="js/parallax.js"></script>
+    <script src="js/mainmenu.js"></script>
 	<script src="js/logosvg.js"></script>
     <script src="js/menuba.js"></script>
     <script src="js/backgroundtexture.js"></script>
