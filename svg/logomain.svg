@@ -10,6 +10,7 @@
 		stroke-dasharray: 13px;
 		stroke-dashoffset: 13px;
 		stroke-linecap: round;
+-webkit-animation:rightline3-move 4s ease forwards;
 		animation: rightline3-move 4s ease forwards;
 		}
 		@keyframes rightline3-move {
@@ -30,6 +31,7 @@
 		stroke-dasharray: 32px;
 		stroke-dashoffset: 32px;
 		stroke-linecap: round;
+-webkit-animation: rightline2-move 4s ease forwards;
 		animation: rightline2-move 4s ease forwards;
 		}
 		@keyframes rightline2-move {
@@ -50,6 +52,7 @@
 		stroke-dasharray: 13px;
 		stroke-dashoffset: 13px;
 		stroke-linecap: round;
+-webkit-animation:rightline1-move 4s ease forwards;
 		animation: rightline1-move 4s ease forwards;
 		}
 		@keyframes rightline1-move {
@@ -70,6 +73,7 @@
 		stroke-dasharray: 13px;
 		stroke-dashoffset: 13px;
 		stroke-linecap: round;
+-webkit-animation:leftline1-move 4s ease forwards;
 		animation: leftline1-move 4s ease forwards;
 		}
 		@keyframes leftline1-move {
@@ -90,6 +94,7 @@
 		stroke-dasharray: 32px;
 		stroke-dashoffset: 32px;
 		stroke-linecap: round;
+-webkit-animation:leftline2-move 4s ease forwards;
 		animation: leftline2-move 4s ease forwards;
 		}
 		@keyframes leftline2-move {
@@ -110,6 +115,7 @@
 		stroke-dasharray: 13px;
 		stroke-dashoffset: 13px;
 		stroke-linecap: round;
+-webkit-animation:leftline3-move 4s ease forwards;
 		animation: leftline3-move 4s ease forwards;
 		}
 		@keyframes leftline3-move {
@@ -130,6 +136,7 @@
 		stroke-dasharray: 83px;
 		stroke-dashoffset: 83px;
 		stroke-linecap: round;
+-webkit-animation:leftdowncircle-move 4s ease-in forwards;
 		animation: leftdowncircle-move 4s ease-in forwards;
 		}
 		@keyframes leftdowncircle-move {
@@ -147,6 +154,7 @@
 		stroke-dasharray: 83px;
 		stroke-dashoffset: 83px;
 		stroke-linecap: round;
+-webkit-animation:rightupcircle-move 4s ease-in forwards;
 		animation: rightupcircle-move 4s ease-in forwards;
 		}
 		@keyframes rightupcircle-move {
@@ -165,6 +173,7 @@
 		stroke-dasharray: 13px;
 		stroke-dashoffset: 13px;
 		stroke-linecap: round;
+-webkit-animation:midhorizonline-move 4s ease-out forwards;
 		animation: midhorizonline-move 4s ease-out forwards;
 		}
 		@keyframes midhorizonline-move {
@@ -187,6 +196,7 @@
 		stroke-dasharray: 13px;
 		stroke-dashoffset: 13px;
 		stroke-linecap: round;
+-webkit-animation:midverticalline-move 4s ease-out forwards;
 		animation: midverticalline-move 4s ease-out forwards;
 		}
 		@keyframes midverticalline-move {
@@ -208,6 +218,7 @@
 		stroke-dasharray: 39px;
 		stroke-dashoffset: 39px;
 		stroke-linecap: round;
+-webkit-animation:circle-move 4s ease forwards;
 		animation: circle-move 4s ease forwards;
 		}
 		@keyframes circle-move {
@@ -228,6 +239,7 @@
 		stroke-dasharray: 32px;
 		stroke-dashoffset: 32px;
 		stroke-linecap: round;
+-webkit-animation: triangle-move 4s ease forwards;
 		animation: triangle-move 4s ease forwards;
 		}
 		@keyframes triangle-move {

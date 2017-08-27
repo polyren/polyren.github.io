@@ -17,60 +17,62 @@
         <tag class="part-2"></tag>
         <tag class="part-3"></tag>
     </div> 
-    <div id="red-bg"></div>
     <div id="transparent-bg"></div>
+    <div id="red-bg"></div>
+    <div class="mainmenu page">
     <div class="mainmenu-text">
         <div class="brief" type="display: none">
             <p>
-                <spam style="font-weight:bold">Homepage</spam>
+                <spam style="font-weight:bold">Homepage<tag class="homepageback"></tag></spam>
                 <spam >is for curent projects</spam>
             </p>
             <p>
-                <spam style="font-weight:bold">Projects</spam>
+                <spam style="font-weight:bold">Projects<tag class="projectsback"></tag></spam>
                 <spam >is for exploring more</spam>
             </p>
             <p>
-                <spam style="font-weight:bold">Resume</spam>
+                <spam style="font-weight:bold">Resume<tag class="resumeback"></tag></spam>
                 <spam >is for the one who want<br /> to work with me</spam>
             </p>
         </div>
         <div class="mainmenu-big">
             <p id="projects">
                 <span class="blue-num" >01</span><br />
-                <span style="font-weight:bold">Projects</span>
+                <span style="font-weight:bold" id="projects-big">Projects</span>
             </p>
             <p id="resume">
                 <span class="blue-num" >02</span><br />
-                <span style="font-weight:bold">Resume</span>
+                <span style="font-weight:bold" id="resume-big">Resume</span>
             </p>
             <p id="homepage">
                 <span class="blue-num" >03</span><br />
-                <span style="font-weight:bold">Homepage</span>
+                <span style="font-weight:bold" id="homepage-big">Homepage</span>
             </p>
         </div>
         <div class="mainmenu-program">
             <div class="menu-line"></div>
-            <p id="program-title">Programing & Games</p>
+            <p id="program-title">Programing & Games<tag class="pgback"></tag></p>
             <ul id="program-list">
                 <script id="programs" type="x-handlebars-template">
                     {{#each this}}     
-                        <li  class="programs-names">{{name}}</li>
+                        <li  data-index= "{{id}}" class="programs-names">{{name}}</li>
                     {{/each}}  
                 </script>
             </ul>
         </div>
         <div class="mainmenu-comm">
             <div class="menu-line"></div>
-            <p id="comm-title">Communication Design</p>
+            <p id="comm-title">Communication Design<tag class="cdback"></tag></p>
             <ul id="comm-list">
                 <script id="comms" type="x-handlebars-template">
                     {{#each this}}     
-                        <li  class="comm-names">{{name}}</li>
+                        <li data-index= "{{id}}" class="comm-names">{{name}}</li>
                     {{/each}}  
                 </script>
             </ul>
         </div> 
-    </div>
+    </div></div>
+    
     <div class="emailbar" >
         <img id="emailadd" height="150px"  src="svg/gmailadd.svg" pointer-events="none">
         <tag class="gmailback"></tag>
@@ -101,15 +103,19 @@
                 <img class="link-icon" height="24px" width="24px"  src="svg/link.svg" pointer-events="none">
         </li>
     </ul>
-    <ul id="homepageMenu">
-            <li  data-menuanchor="page1dot" class="homepageslide" ><a href="#page1dot"></a></li>
-            <script id="homepage-dots" type="x-handlebars-template">
-                {{#each this}}     
-                    <li  data-menuanchor="page{{id}}dot" class="homepageslide"><a href="#page{{id}}dot"></a></li>
-                {{/each}}  
-            </script>
-    </ul>
-    <div class="homepage" id="scene">
+
+    <div class="homepage page" id="scene">
+        <div class="dotcontainer">
+            <ul id="homepageMenu">
+                <li  data-menuanchor="page1dot" class="homepageslide" ><a ></a></li>
+                <script id="homepage-dots" type="x-handlebars-template">
+                    {{#each this}}     
+                        <li  data-menuanchor="page{{id}}dot" class="homepageslide"><a ></a></li>
+                    {{/each}}  
+                </script>
+            </ul>
+        </div>
+        
         <div class="section homepagemain">         
             <img class="rectexture layer"  width="570px" height="570px" data-depth="0.50" src="svg/striptexture.svg" pointer-events="none" > 
             <div class="homepage-text layer" data-depth="0.40" >
@@ -158,6 +164,24 @@
         </div>
 
     </div>
+    <div class="PGpage page" id="PGscene">
+        <div class="section PGmain">    
+        </div>
+    </div>
+     <div class="resumepage page">
+        <div class="resumemain">    
+        </div>
+    </div>
+    <div class="CDpage page" id="CDscene">
+        <div class="section CDpagemain">    
+        </div>
+    </div>
+    <div class="singlepage page">
+        <div class="section programspagemain">  
+            <h3> single project view</h3>
+            <img src=""/>
+        </div>
+    </div>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery.svg.js "></script>
     <script src="js/jquery.svganim.min.js "></script>
@@ -175,7 +199,7 @@
                             <h3 class="sect-catlog">{{catlog}}</h3>
                             <h3 class="sect-name">{{name}}</h3>
                             <h3 class="sect-year">{{year}}</h3>
-                            <div class="check-out" href="#">
+                            <div class="check-out" href="#page{{id}}dot" data-index="{{id}}">
                                 <tag class="check-out-back"></tag>
                                 <a>check it out</a>               </div>  
                            </div>

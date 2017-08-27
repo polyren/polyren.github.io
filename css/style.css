@@ -58,7 +58,7 @@ body{
     .crossline{
       mix-blend-mode: multiply;
       background:url("../svg/backgroundcross.svg");
-      opacity: 0.14;
+      opacity: 0.05;
       height: 15px;
       margin: 6em 6em 6em 6em;
       width: 15px;
@@ -78,7 +78,6 @@ body{
     @-webkit-keyframes dazzle {
       0% { -webkit-transform: rotate(0deg) scale(1); }
       50% { -webkit-transform: rotate(0deg) scale(1); }
-      75% { -webkit-transform: rotate(180deg) scale(1.5); }
       100% { -webkit-transform: rotate(360deg) scale(1); }
     }
     #red-bg{
@@ -87,8 +86,8 @@ body{
       width: 100%;
       height: 100%;
       background-color: #ed403a;
-      -webkit-transition: all 800ms ease-in;
-      transition: all 800ms ease-in;
+      -webkit-transition: all 900ms ease-in-out;
+      transition: all 900ms ;
       -webkit-transform: translateY(-100vh);
               transform: translateY(-100vh);  
     }
@@ -127,11 +126,13 @@ body{
         top:50%;
         margin-top: -23px;
         margin-left: 69px;
+        -webkit-transition:all 0.3s;;
         transition:all 0.3s;
           }
     .part-1,.part-2,.part-3{
             content:"";
             position: absolute;
+            -webkit-transition:all 0.3s;;
             transition:all 0.3s;     
       
     }
@@ -207,7 +208,7 @@ body{
         100%{opacity: 1.0;bottom: 51px;}
     }
     #emailadd{
-        background-color: #140E32;
+/*        background-color: #140E32;*/
         padding-bottom: 20px;
         bottom: 30px;
         cursor:pointer; 
@@ -370,12 +371,15 @@ body{
         left:-3px;
     }
     .scroll-container {
+      visibility: visible;
       opacity: 0;
       position: absolute;
       bottom:51px;
       left: 50%;
       margin-left: -41px;
-      animation: fadein-move2 2s ease forwards; 
+      animation: fadein-move2 2s ease forwards ; 
+        -webkit-transition: all .2s ease-out .4s;
+        transition: all .2s ease-out .4s;
     }
     @keyframes fadein-move2 {
       50% {
@@ -393,12 +397,20 @@ body{
       position: relative;
       display: block;
       z-index: 2;
-      width: 25px;
-      height: 40px;
+      width: 18px;
+      height: 27px;
       border-radius: 14px;
-      border: 2px #FFFFFF solid;
+      border: 1px #FFFFFF solid;
       -webkit-transition: all 0.5s ease;
-      transition: all 0.5s ease;
+      transition: all 0.2s ease;
+    }
+    .scroll-container.inactive{
+        visibility: hidden;
+        opacity: 0.0;
+        margin-top:0px;
+        -webkit-transition: all .2s ease-out .4s;
+        transition: all .2s ease-out .4s;
+        
     }
     .scroll:hover {
       opacity: 0.5;
@@ -406,43 +418,40 @@ body{
       transition: all 0.5s ease;
     }
     .scroll:before {
+        
       content: '';
       position: absolute;
-      top: 8px;
-      left: 9px;
-      width: 4px;
-      height: 4px;
+      top: 5px;
+      left: 8px;
+      width: 1px;
+      height: 2px;
       background: #FFFFFF;
       border-radius: 2px;
       -webkit-animation: scrollanim 2s infinite;
               animation: scrollanim 2s infinite;
     }
-/*
-    .homepage{
-        visibility: hidden;
-    }
-*/
+
     @-webkit-keyframes scrollanim {
       0% {
-        height: 5px;
+        height: 2px;
       }
       50% {
-        height: 18px;
+        height: 10px;
       }
       100% {
-        height: 5px;
+        height: 2px;
       }
     }
 
     @keyframes scrollanim {
       0% {
-        height: 5px;
+        height: 2px;
       }
       50% {
-        height: 18px;
+        height: 10px;
       }
       100% {
-        height: 5px;
+        height: 2px;
       }
     }
     
@@ -703,25 +712,27 @@ body{
         position: absolute;
         width: 100%;
         height: 100%;
-         animation: homepage-appear 1s ease forwards;
+        opacity: 0.0;
+        visibility: hidden;
+        -webkit-transition:all 300ms ease-out .4s;
+        transition:all 300ms ease-out .4s;
+        transition-duration: 100ms
         }
-        @keyframes homepage-appear{
-                0%{opacity: 0.0;display:none}
-                40%{opacity: 0.0;display:none}
-                70%{opacity: 1.0;display:block}
-                100%{opacity: 1.0; display:block}
-        }
-
+    .homepage.visible{
+         visibility: visible;
+         opacity: 1.0;
+        -webkit-transition:all 0.3s ease-out .4s;
+        transition:all 0.3s ease-out .4s;
+        transition-duration: 100ms;
+    }
     .homepage.inactive{
-     animation: homepage-disappear 1.5s ease forwards;
+        visibility: hidden;
+        opacity: 0.0;
+        -webkit-transition:all 1ms ease-out ;
+        transition:all 1ms ease-out ;
+        transition-duration: 100ms
     }
-    @keyframes homepage-disappear{
-        0%{opacity: 1.0;visibility: visible}
-            20%{opacity: 1.0;visibility: visible}
-            40%{opacity: 0.0;visibility: hidden}
-            100%{opacity: 0.0; visibility: hidden}
-    }
-    
+
     .bg-image{
         background-color: #140E32;
         background-blend-mode:multiply;
@@ -762,12 +773,14 @@ body{
         max-width: 100%;
         width: 100%;
         height: 100%;
+        background-size: cover;
         object-fit: cover;
         margin-left: -50vw;
         margin-top:-50vh
     }
     .main-sect{
         position: absolute;
+        z-index: 7;
         padding: 48px;
         width: 20rem;
         height: 18rem;
@@ -865,30 +878,45 @@ body{
     }
     
     #homepageMenu{
-    position: absolute;
-    z-index: 2;
-    height: auto;
-    text-align: :center;
-    margin-left: 13vw;
-    margin-top: -70px;
-    top:50%;
-    list-style-type: none;
-    animation: homepageslide-appear 2s ease forwards;
-    }    
-    @keyframes homepageslide-appear{
-            0%{opacity: 0.0;margin-left: 14vw;}
-            40%{opacity: 0.0;margin-left: 14vw;}
-            70%{opacity: 1.0;margin-left: 13vw;}
-            100%{opacity: 1.0;margin-left: 13vw;}
-     }
-    #homepageMenu.inactive{
-        animation: homepageslide-disappear 1s ease forwards;
+        position: absolute;
+        z-index: 2;
+        height: auto;
+        text-align: :center;
+        margin-left: 13vw;
+        margin-top: -70px;
+        top:50%;
+        list-style-type: none;
+        opacity: 0.0;
+        visibility: hidden;
+        
     }
-    @keyframes homepageslide-disappear{
-            0%{opacity: 1.0;margin-left: 13vw;display:block}
-            20%{opacity: 1.0;margin-left: 13vw;display:block}
-            50%{opacity: 0.0;margin-left: 14vw;display:none}
-            100%{opacity: 0.0;margin-left: 14vw; display:none}
+
+    #homepageMenu.visible{
+        opacity: 1.0;
+        visibility: visible;
+         animation: homepageslide-move2 3s ease forwards; 
+        -webkit-transition:all 0.2s ease ;
+        transition:all 0.2s ease ;
+        transition-delay: .2s;
+        -webkit-transition-delay: .2s;
+       
+    }
+    
+    #homepageMenu.inactive{
+        opacity: 0.0;
+        visibility: hidden;
+        -webkit-transition:all 0.2s ease;
+        transition:all 0.2s ease;
+        transition-delay: .2s;
+        -webkit-transition-delay: .2s;
+    }
+    #homepageMenu.visible.inactive{
+        opacity: 0.0;
+         visibility: hidden;
+        -webkit-transition:all 0.2s ease;
+        transition:all 0.2s ease;
+        transition-delay: .2s;
+        -webkit-transition-delay: .2s;
     }
     
     .homepageslide{
@@ -902,8 +930,14 @@ body{
           border-radius: 50%;
           border: 1px solid #fff;
           cursor: pointer;
-          background-color: none;      
+          background-color: none;  
     }
+        @keyframes homepageslide-move2{
+            0%{opacity: 0.0;}
+            20%{opacity: 0.0;}
+            50%{opacity: 1.0;}
+            100%{opacity: 1.0;}
+     }
 
     .homepageslide.active{
           animation: homepageslide-move 1s ease forwards; 
@@ -943,13 +977,16 @@ body{
         top:5vh;
         font-size: 16px;
         line-height: 30px;
-        -webkit-transition: all .2s ease-out .3s;
-        transition: all .2s ease-ease .3s;
+        font-weight: 100;
+        -webkit-transition: all .2s ease-out 0.4s;
+        transition: all .2s ease-out 0.4s;
     }
     .brief.active{
         top:10vh;
         opacity: 1.0;
         visibility: visible;
+        -webkit-transition: all .2s ease-out .3s;
+        transition: all .2s ease-out .3s;
     }
     .brief p{
         margin:0;
@@ -960,13 +997,27 @@ body{
         visibility: hidden;
         opacity: 0.0;
         margin-top:-20px;
-        -webkit-transition: all .2s ease-out .4s;
-        transition: all .2s ease-ease .4s;
+        -webkit-transition: all .2s ease-out .2s;
+        transition: all .2s ease-out .2s;
     }
     #projects.active{
         visibility: visible;
-        opacity: 1.0;
+        opacity: 1;
         margin-top:0;
+        -webkit-transition: all .2s ease-out .4s;
+        transition: all .2s ease-out .4s;
+    }
+    
+    #projects-big{
+        -webkit-transition: all .2s ease ;
+        transition: all .2s ease;
+        opacity: 0.6;
+    }
+    #projects-big:hover{
+        opacity: 1;
+    }
+    #projects-big.active{
+        opacity: 1;
     }
     
     
@@ -975,33 +1026,55 @@ body{
         visibility: hidden;
         opacity: 0.0;
         margin-top:-20px;
-        -webkit-transition: all .2s ease-out .5s;
-        transition: all .2s ease-ease .5s;
+        -webkit-transition: all .2s ease-out .2s;
+        transition: all .2s ease-out .2s;
     }
     #resume.active{
         visibility: visible;
         opacity: 1.0;
         margin-top:0;
+        -webkit-transition: all .2s ease-out .3s;
+        transition: all .2s ease-out .3s;
     }
+    
+    #resume-big{
+        -webkit-transition: all .2s ease ;
+        transition: all .2s ease;
+        opacity: 0.6;
+    }
+    #resume-big:hover{
+        opacity: 1;
+    }
+    
 
     #homepage{
         z-index: 8;
         visibility: hidden;
         opacity: 0.0;
         margin-top:-20px;
-        -webkit-transition: all .2s ease-out .6s;
-        transition: all .2s ease-ease .6s;
+        -webkit-transition: all .2s ease-out .1s;
+        transition: all .2s ease-out .1s;
     }
     
     #homepage.active{
         visibility: visible;
         opacity: 1.0;
         margin-top:0;
+         -webkit-transition: all .2s ease-out .2s;
+        transition: all .2s ease-out .2s;
+    }
+    #homepage-big{
+        -webkit-transition: all .2s ease ;
+        transition: all .2s ease;
+        opacity: 0.6;
+    }
+    #homepage-big:hover{
+        opacity: 1;
     }
     
     .mainmenu-big{
         z-index: 8;
-        font-size: 2rem;
+        font-size: 2.5rem;
         position: absolute;
         top:29vh; 
         line-height: 50px;
@@ -1010,37 +1083,43 @@ body{
         z-index: 8;
         position: absolute;
         top:28vh; 
-        left:25vw;
+        left:23vw;
         font-size: 16px;
-        
+        margin-top: 50px;
         visibility: hidden;
         opacity: 0.0;
-        margin-top:0px;
-        -webkit-transition: all .2s ease-out .4s;
-        transition: all .2s ease-ease .4s;
+        margin-left: -30px;
+        -webkit-transition: all .2s ease-out .2s;
+        transition: all .2s ease-out .2s;
     }
     .mainmenu-program.active{
         visibility: visible;
         opacity: 1.0;
-        margin-top:50px;
+        margin-left: 0px;
+        -webkit-transition: all .2s ease-out .4s;
+        transition: all .2s ease-out .4s;
+
     }
     .mainmenu-comm{
         z-index: 8;
         position: absolute;
         top:28vh; 
-        left:50vw;
-        margin-top: 0px;
+        left:48vw;
+        margin-top: 50px;
         visibility: hidden;
         opacity: 0.0;
-        margin-top:0px;
-        -webkit-transition: all .2s ease-out .4s;
-        transition: all .2s ease-ease .4s;
+        margin-left: -30px;
+        -webkit-transition: all .2s ease-out .2s;
+        transition: all .2s ease-out .2s;
     }
     
      .mainmenu-comm.active{
         visibility: visible;
         opacity: 1.0;
-        margin-top:50px;
+         margin-left: 0px;
+        -webkit-transition: all .2s ease-out .5s;
+        transition: all .2s ease-out .5s;
+
     }
     
     .blue-num{
@@ -1053,17 +1132,24 @@ body{
         cursor: pointer;
         margin:0 0 7vh 0;
     }
-    #program-title{
+    #program-title, #comm-title{
         cursor: pointer;
         font-size: 18px;
+        font-weight: bolder;
+        opacity: 0.7;
     }
+    #program-title:hover,#comm-title:hover{
+         opacity: 1;
+    }
+     
     #program-list,#comm-list{
         
         list-style-type: none; 
         text-align: left;
         padding-left: 0;
-        opacity: .8;
+        opacity: 1;
         margin-top: 35px;
+         cursor: pointer;
     }
     #program-list li,#comm-list li{
         margin-bottom: 10px;
@@ -1073,10 +1159,10 @@ body{
     .menu-line{
         content: '';
         position: absolute;
-        top: 0;
-        left: -18px;
+        top: -30px;
+        left: -30px;
         width:1px;
-        height: 100%;
+        height: 105%;
         background-color: #ed403a;
     }
     .menu-line::before{
@@ -1088,5 +1174,162 @@ body{
         height: 30px;
         background-color: #ed403a;
     }
-
+    
+   .homepageback{
+        top:0px;
+        left:0px;
+        overflow: hidden;
+        position: absolute;
+        width: 35%;
+        height:20%;
+        opacity: 1;
+          
+    }
+    .homepageback.active::before{
+        background-color: #fff;
+        content: '';
+        left:-100%;
+        width: 100%;
+        height:100%;
+        opacity: 1;
+        position: absolute;
+        animation: homepageback-move 6s forwards;
+        -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); /* Safari 4.0 - 8.0 */
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+        -webkit-animation-delay: 1.2s; /* Safari 4.0 - 8.0 */
+        animation-delay: 1.2s;
+        -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+        animation-iteration-count: infinite;  
+    }
+        @keyframes homepageback-move{
+        0%{
+        left:-100%;
+                    }
+        10%{
+        left:100%;
+                    }
+        100%{
+        left:100%;
+                    }
+      }
+    
+    
+    .projectsback{
+        top:30px;
+        left:0px;
+        overflow: hidden;
+        position: absolute;
+        width: 25%;
+        height:20%;
+        opacity: 1;
+    }
+    .projectsback.active::before{
+        background-color: #fff;
+        content: '';
+        left:-100%;
+        width: 100%;
+        height:100%;
+        opacity: 1;
+        position: absolute;
+        animation: projectsback-move 6s forwards;
+        -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); /* Safari 4.0 - 8.0 */
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+        -webkit-animation-delay: 1.6s; /* Safari 4.0 - 8.0 */
+        animation-delay: 1.6s;
+        -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+        animation-iteration-count: infinite;  
+    }
+        @keyframes projectsback-move{
+        0%{
+        left:-100%;
+                    }
+        10%{
+        left:100%;
+                    }
+        100%{
+        left:100%;
+                    }
+      }
+    .resumeback{
+        top:60px;
+        left:0px;
+        overflow: hidden;
+        position: absolute;
+        width: 25%;
+        height:20%;
+        opacity: 1;
+    }
+    .resumeback.active::before{
+        background-color: #fff;
+        content: '';
+        left:-100%;
+        width: 100%;
+        height:100%;
+        opacity: 1;
+        position: absolute;
+        animation: resumeback-move 6s forwards;
+        -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); /* Safari 4.0 - 8.0 */
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+        -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+        animation-delay: 2s;
+        -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+        animation-iteration-count: infinite;  
+    }
+        @keyframes resumeback-move{
+        0%{
+        left:-100%;
+                    }
+        10%{
+        left:100%;
+                    }
+        100%{
+        left:100%;
+                    }
+      }
+    
+    .pgback{
+        top:14px;
+        left:0px;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height:10%;
+    }
+ 
+     .cdback{
+        top:14px;
+        left:0px;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height:10%;
+    }
+    .comm-names{
+        opacity: 0.6;
+    }
+    .comm-names:hover{
+        opacity: 1;
+    }
+    
+    .programs-names{
+        opacity: 0.6;
+    }
+    .programs-names:hover{
+        opacity: 1;
+    }
+    .mainmenu {
+        opacity: 0;
+        -webkit-transition:all 0.2s;;
+        transition:all 0.2s;
+        transition-timing-function: ease-in-out;
+    }
+    .mainmenu.visible{
+        opacity: 1;
+        -webkit-transition:all 0.2s;;
+        transition:all 0.2s;
+        transition-timing-function: ease-in-out;
+    }
+    #resume-big.hilight,#homepage-big.hilight,#projects-big.hilight,#program-title.hilight,#projects-big.hilight,#comm-title.hilight{
+        opacity: 1;
+    }
 }

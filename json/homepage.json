@@ -2,21 +2,21 @@
     {
         "id":2,
         "name":"Super Meathead",
-        "image":"./images/demo1.jpg",
+        "image":"./images/homepage/demo1.jpg",
         "catlog":"Mobile game design",
         "year":"2017"      
     },
     {
         "id":3,
         "name":"Atlas \n the lost city",
-        "image":"./images/demo2.jpg",
+        "image":"./images/homepage/demo2.jpg",
         "catlog":"Si-fi game design",
         "year":"2017"      
     },
     {
         "id":4,
         "name":"Keystone city of portals",
-        "image":"./images/demo3.jpg",
+        "image":"./images/homepage/demo3.jpg",
         "catlog":"VR game design",
         "year":"2017"      
     }
