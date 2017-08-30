@@ -32,7 +32,7 @@ $(document).ready(function() {
             lockAnchors: true,
             controlArrows: true,
             }); 
-            var parallax = new Parallax(scene);
+//            var parallax = new Parallax(scene);
             
         })
         .fail(function(){
