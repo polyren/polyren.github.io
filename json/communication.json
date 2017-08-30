@@ -8,7 +8,7 @@
     },
     {
         "id":2,
-        "name":"illustration&painting",
+        "name":"illustration & painting",
         "image":"./images/CD/demo2/demo2.jpg",
         "catlog":"illustration",
         "year":"2011"      
@@ -23,28 +23,28 @@
     {
         "id":4,
         "name":"VI design",
-        "image":"./images/CD/demo4/demo4.jpg",
+        "image":"./images/CD/demo4/demo4.png",
         "catlog":"vi",
         "year":"2013"      
     },
     {
         "id":5,
         "name":"Package design",
-        "image":"./images/CD/demo5/demo5.jpg",
+        "image":"./images/CD/demo5/demo5.png",
         "catlog":"package",
         "year":"2014"      
     },
     {
         "id":6,
         "name":"Stop motion animation",
-        "image":"./images/CD/demo6/demo6.jpg",
+        "image":"./images/CD/demo6/demo6.png",
         "catlog":"animation",
         "year":"2012"      
     },
     {
         "id":7,
         "name":"movie&film shooting",
-        "image":"./images/CD/demo7/demo7.jpg",
+        "image":"./images/CD/demo7/demo7.png",
         "catlog":"film",
         "year":"2014"      
     }   

@@ -372,6 +372,7 @@ body{
     }
     .scroll-container {
       visibility: visible;
+        z-index: 3;
       opacity: 0;
       position: absolute;
       bottom:51px;
@@ -708,6 +709,7 @@ body{
     }
 
     .homepage{
+        top:0;
         z-index: 1;
         position: absolute;
         width: 100%;
@@ -749,10 +751,9 @@ body{
     .main-image{
         position:relative;
         background-color: aqua;    
-        margin-top: 1vh;
         width: 0vw;
         height: 0vh;
-        
+
     }
     .cover{
         position: fixed;
@@ -776,7 +777,8 @@ body{
         background-size: cover;
         object-fit: cover;
         margin-left: -50vw;
-        margin-top:-50vh
+        margin-top:-50vh;
+        z-index: 2;  
     }
     .main-sect{
         position: absolute;
@@ -1331,5 +1333,66 @@ body{
     }
     #resume-big.hilight,#homepage-big.hilight,#projects-big.hilight,#program-title.hilight,#projects-big.hilight,#comm-title.hilight{
         opacity: 1;
+    }
+    .section{
+        position: relative;
+    }
+    .fp-slides{
+        z-index: 1;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        -webkit-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+    }
+
+    .fp-slidesContainer{
+        height: 100%;
+        display: block;
+        float: left;
+        position: relative;
+    }
+    .fp-section.fp-table, .fp-slide.fp-table {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+    .fp-slide, .fp-slidesContainer {
+        height: 100%;
+        display: block;
+    }
+    .fp-slide {
+        float: left;
+    }
+    .fp-controlArrow {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -ms-user-select: none;
+        position: absolute;
+        z-index: 4;
+              bottom:51px;
+        cursor: pointer;
+        opacity: 0.5;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        margin-top: -38px;
+        -webkit-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+    .fp-controlArrow.fp-prev {
+        left: 50%;
+        margin-left:-8rem;
+        width: 0;
+        border-width: 28px;
+        border-color: transparent #fff transparent transparent;
+    }
+    .fp-controlArrow.fp-next {
+        right: 50%;
+        margin-right:-8rem;
+        border-width: 28px 0 28px 34px;
+        border-color: transparent transparent transparent #fff;
     }
 }

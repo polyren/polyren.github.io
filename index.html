@@ -108,15 +108,13 @@
         <div class="dotcontainer">
             <ul id="homepageMenu">
                 <li  data-menuanchor="page1dot" class="homepageslide" ><a ></a></li>
-                <script id="homepage-dots" type="x-handlebars-template">
-                    {{#each this}}     
-                        <li  data-menuanchor="page{{id}}dot" class="homepageslide"><a ></a></li>
-                    {{/each}}  
-                </script>
+                <li  data-menuanchor="page2dot" class="homepageslide"><a ></a></li>
+                <li  data-menuanchor="page3dot" class="homepageslide"><a ></a></li>
             </ul>
         </div>
         
-        <div class="section homepagemain">         
+        <div class="section homepagemain" id="HOME">   
+            <div class="slide">
             <img class="rectexture layer"  width="570px" height="570px" data-depth="0.50" src="svg/striptexture.svg" pointer-events="none" > 
             <div class="homepage-text layer" data-depth="0.40" >
                     <p class="title designer" font-weight= "600">
@@ -160,20 +158,20 @@
                     <p class="building">
                          <span style="color: #0176E8">Building cool stuffs</span>
                     </p>
-                </div>         
+                </div>
+            </div>    
         </div>
+        <div class="section PGpage" id="PG">
+        </div>
+        <div class="section CDpage" id="CD">
+            <div class="CDslides">
 
-    </div>
-    <div class="PGpage page" id="PGscene">
-        <div class="section PGmain">    
+            </div>    
         </div>
     </div>
-     <div class="resumepage page">
+    
+    <div class="resumepage page">
         <div class="resumemain">    
-        </div>
-    </div>
-    <div class="CDpage page" id="CDscene">
-        <div class="section CDpagemain">    
         </div>
     </div>
     <div class="singlepage page">
@@ -188,25 +186,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/jquery.gsap.min.js "></script>
     <script src="js/fullpagescroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js "></script>  
-        <script id="homepage-template" type="x-handlebars-template">
-            {{#each this}}               
-                <div class="section" data-index="{{id}}">
-                    <img class="bg-image" style='background-image:url("{{image}}")'>
-                    <div class="main-image">
-                        <div class="cover layer" data-depth="0.10">       
-                            <img class="cover-img layer" data-depth="0.10" src="{{image}}">
-                            <div class="main-sect ">
-                            <h3 class="sect-catlog">{{catlog}}</h3>
-                            <h3 class="sect-name">{{name}}</h3>
-                            <h3 class="sect-year">{{year}}</h3>
-                            <div class="check-out" href="#page{{id}}dot" data-index="{{id}}">
-                                <tag class="check-out-back"></tag>
-                                <a>check it out</a>               </div>  
-                           </div>
+    <script id="PG-template" type="x-handlebars-template">
+                {{#each this}} 
+                    <div class="slide" data-anchor="slide{{id}}">
+                        <img class="bg-image" style='background-image:url("{{image}}")'>
+                        <div class="main-image">
+                            <div class="cover layer" data-depth="0.10">       
+                                <img class="cover-img layer" data-depth="0.10" src="{{image}}">
+                                <div class="main-sect ">
+                                <h3 class="sect-catlog">{{catlog}}</h3>
+                                <h3 class="sect-name">{{name}}</h3>
+                                <h3 class="sect-year">{{year}}</h3>
+                                <div class="check-out" href="#page{{id}}dot" data-index="{{id}}">
+                                    <tag class="check-out-back"></tag>
+                                    <a>check it out</a>               </div>  
+                               </div>
+                            </div>
                         </div>
                     </div>
+                {{/each}}
+    </script>
+    <script id="CD-template" type="x-handlebars-template">
+        {{#each this}}  
+             <div class="slide">
+                <img class="bg-image" style='background-image:url("{{image}}")'>
+                <div class="main-image">
+                    <div class="cover layer" data-depth="0.10">       
+                        <img class="cover-img layer" data-depth="0.10" src="{{image}}">
+                        <div class="main-sect ">
+                        <h3 class="sect-catlog">{{catlog}}</h3>
+                        <h3 class="sect-name">{{name}}</h3>
+                        <h3 class="sect-year">{{year}}</h3>
+                        <div class="check-out" href="#page{{id}}dot" data-index="{{id}}">
+                            <tag class="check-out-back"></tag>
+                            <a>check it out</a>               </div>  
+                       </div>
+                    </div>
                 </div>
-            {{/each}}
+            </div>
+        {{/each}}
     </script>
     <script src="js/jquery.fullpage.js"></script>
     <script src="js/parallax.js"></script>

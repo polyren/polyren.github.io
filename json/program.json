@@ -23,21 +23,21 @@
     {
         "id":4,
         "name":"shakerama",
-        "image":"./images/PG/demo4/demo4.jpg",
+        "image":"./images/PG/demo4/demo4.png",
         "catlog":"IoT game design",
         "year":"2016"      
     },
     {
         "id":5,
         "name":"JONDS",
-        "image":"./images/PG/demo5/demo5.jpg",
+        "image":"./images/PG/demo5/demo5.png",
         "catlog":"Mobile game",
         "year":"2017"      
     },
     {
         "id":6,
         "name":"Music band boxes",
-        "image":"./images/PG/demo6/demo6.jpg",
+        "image":"./images/PG/demo6/demo6.png",
         "catlog":" interactive installation",
         "year":"2017"      
     }

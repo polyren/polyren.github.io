@@ -57,8 +57,8 @@
             $(".mainmenu-program").removeClass('active');
             $(".mainmenu-comm").removeClass('active');
             $("#projects-big").removeClass('active');
-            
             $('#scene').fullpage.setAllowScrolling(true);
+            console.log('1111');   
 
         }else{
             $(menu).addClass('menu-active');
