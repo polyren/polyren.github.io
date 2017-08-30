@@ -14,7 +14,7 @@ $(document).ready(function() {
         $.getJSON("./json/program.json", function(data){
             console.log( "programsuccess" );
             programprojects=data;
-//            generateprogramProjectsHTML(programprojects);
+            generateprogramProjectsHTML(programprojects);
         })
         .fail(function(){
             console.log("programfailed");
@@ -24,7 +24,7 @@ $(document).ready(function() {
         $.getJSON("./json/communication.json", function(data){
             console.log( "commsuccess" );
             commprojects=data;
-//            generatecommProjectsHTML(commprojects);
+            generatecommProjectsHTML(commprojects);
             
             $('#scene').fullpage({
             anchors:['page1dot', 'page2dot', 'page3dot'],
