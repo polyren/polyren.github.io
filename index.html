@@ -80,7 +80,6 @@
     </div>
     <div class="navigation">
         <div class="navigation-line"></div>
-        <img class="navigation-icon"  width="26px" height="153px" src="svg/homepageicon.svg" pointer-events="none">
     </div>
     <div class="scroll-container">
       <a class="scroll" href="#"></a>
@@ -107,9 +106,24 @@
     <div class="homepage page" id="scene">
         <div class="dotcontainer">
             <ul id="homepageMenu">
-                <li  data-menuanchor="page1dot" class="homepageslide" ><a ></a></li>
-                <li  data-menuanchor="page2dot" class="homepageslide"><a ></a></li>
-                <li  data-menuanchor="page3dot" class="homepageslide"><a ></a></li>
+                <li  data-menuanchor="page1dot" class="homepageslide" >    
+                    <div class="navigation1">
+                    <img class="navigation-icon" data-menuanchor="page1dot" width="18.4px"  src="svg/homepageicon.svg" pointer-events="none">
+                        <tag class="homeiconback" data-menuanchor="page1dot"></tag>
+                    </div>
+                </li>
+                <li  data-menuanchor="page2dot" class="homepageslide">
+                    <div class="navigation2">
+                    <img class="navigation-icon" data-menuanchor="page2dot" width="18.4px"  src="svg/pglogo.svg" pointer-events="none">
+                        <tag class="pgiconback" data-menuanchor="page2dot"></tag>
+                    </div>   
+                </li>
+                <li  data-menuanchor="page3dot" class="homepageslide">
+                    <div class="navigation3">
+                    <img class="navigation-icon" data-menuanchor="page3dot" width="18.4px"src="svg/communicationicon.svg" pointer-events="none">
+                        <tag class="cdiconback" data-menuanchor="page3dot"></tag>
+                    </div>
+                </li>
             </ul>
         </div>
         
@@ -188,11 +202,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js "></script>  
     <script id="PG-template" type="x-handlebars-template">
                 {{#each this}} 
-                    <div class="slide" data-anchor="slide{{id}}">
-                        <img class="bg-image" style='background-image:url("{{image}}")'>
+                    <div class="slide" >
+                        <div class="bg-image" style='background-image:url("{{image}}")'></div>
                         <div class="main-image">
                             <div class="cover layer" data-depth="0.10">       
-                                <img class="cover-img layer" data-depth="0.10" src="{{image}}">
+                                <img class="cover-img layer" data-depth="0.10" data-src="{{image}}">
                                 <div class="main-sect layer" data-depth="0.10">
                                 <h3 class="sect-catlog">{{catlog}}</h3>
                                 <h3 class="sect-name">{{name}}</h3>
@@ -209,11 +223,11 @@
     <script id="CD-template" type="x-handlebars-template">
         {{#each this}}  
              <div class="slide">
-                <img class="bg-image" style='background-image:url("{{image}}")'>
+                <div class="bg-image" style='background-image:url("{{image}}")'></div>
                 <div class="main-image">
                     <div class="cover layer" data-depth="0.10">       
-                        <img class="cover-img layer" data-depth="0.10" src="{{image}}">
-                        <div class="main-sect layer" >
+                        <img class="cover-img layer" data-depth="0.10" data-src="{{image}}">
+                        <div class="main-sect layer" data-depth="0.10">
                         <h3 class="sect-catlog">{{catlog}}</h3>
                         <h3 class="sect-name">{{name}}</h3>
                         <h3 class="sect-year">{{year}}</h3>
