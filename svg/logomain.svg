@@ -3,7 +3,6 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 78 78" width="78" height="78"  xml:space="preserve" >
 <style type="text/css">
-<!--
     <![CDATA[
     .g{
     stroke-width="1pt";
@@ -260,7 +259,6 @@
 		  }
 		}												
     ]]>	
--->
 </style>
 <g >
 	<line class="leftline2" id="ll2" x1="25" y1="25" x2="2.7" y2="2.8"  stroke="#ed403a" fill="none" stroke-width="3pt" ></line>
