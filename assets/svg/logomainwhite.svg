@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 78 78" width="78" height="78"  xml:space="preserve" style="cursor:pointer" >
+<style type="text/css">
+    
+    <![CDATA[
+    .g{
+    stroke-width="1pt";
+    }
+    .rightline3{
+		stroke-dasharray: 13px;
+		stroke-dashoffset: 13px;
+		stroke-linecap: round;
+-webkit-animation:rightline3-move 4s ease forwards;
+		animation: rightline3-move 4s ease forwards;
+		}
+		@keyframes rightline3-move {
+		  0% {
+		    stroke-dashoffset: 13px;
+		  }
+		  25% {
+		    stroke-dashoffset: 13px;
+		  }
+		  40% {
+		    stroke-dashoffset: 0px;
+		  }
+		  100% {
+		    stroke-dashoffset: 0px;
+		  }
+		}
+	.rightline2{
+		stroke-dasharray: 32px;
+		stroke-dashoffset: 32px;
+		stroke-linecap: round;
+-webkit-animation: rightline2-move 4s ease forwards;
+		animation: rightline2-move 4s ease forwards;
+		}
+		@keyframes rightline2-move {
+		  0% {
+		    stroke-dashoffset: 32px;
+		  }
+		  25% {
+		    stroke-dashoffset: 32px;
+		  }
+		  40% {
+		    stroke-dashoffset: 0px;
+		  }
+		  100% {
+		    stroke-dashoffset: 0px;
+		  }
+		}
+	.rightline1{
+		stroke-dasharray: 13px;
+		stroke-dashoffset: 13px;
+		stroke-linecap: round;
+-webkit-animation:rightline1-move 4s ease forwards;
+		animation: rightline1-move 4s ease forwards;
+		}
+		@keyframes rightline1-move {
+		  0% {
+		    stroke-dashoffset: 13px;
+		  }
+		  25% {
+		    stroke-dashoffset: 13px;
+		  }
+		  40% {
+		    stroke-dashoffset: 0px;
+		  }
+		  100% {
+		    stroke-dashoffset: 0px;
+		  }
+		}
+	.leftline1{
+		stroke-dasharray: 13px;
+		stroke-dashoffset: 13px;
+		stroke-linecap: round;
+-webkit-animation:leftline1-move 4s ease forwards;
+		animation: leftline1-move 4s ease forwards;
+		}
+		@keyframes leftline1-move {
+		  0% {
+		    stroke-dashoffset: 13px;
+		  }
+		  25% {
+		    stroke-dashoffset: 13px;
+		  }
+		  40% {
+		    stroke-dashoffset: 0px;
+		  }
+		  100% {
+		    stroke-dashoffset: 0px;
+		  }
+		}
+	.leftline2{
+		stroke-dasharray: 32px;
+		stroke-dashoffset: 32px;
+		stroke-linecap: round;
+-webkit-animation:leftline2-move 4s ease forwards;
+		animation: leftline2-move 4s ease forwards;
+		}
+		@keyframes leftline2-move {
+		  0% {
+		    stroke-dashoffset: 32px;
+		  }
+		  25% {
+		    stroke-dashoffset: 32px;
+		  }
+		  40% {
+		    stroke-dashoffset: 0px;
+		  }
+		  100% {
+		    stroke-dashoffset: 0px;
+		  }
+		}
+	.leftline3{
+		stroke-dasharray: 13px;
+		stroke-dashoffset: 13px;
+		stroke-linecap: round;
+-webkit-animation:leftline3-move 4s ease forwards;
+		animation: leftline3-move 4s ease forwards;
+		}
+		@keyframes leftline3-move {
+		  0% {
+		    stroke-dashoffset: 13px;
+		  }
+		  25% {
+		    stroke-dashoffset: 13px;
+		  }
+		  40% {
+		    stroke-dashoffset: 0px;
+		  }
+		  100% {
+		    stroke-dashoffset: 0px;
+		  }
+		}
+	.leftdowncircle{
+		stroke-dasharray: 83px;
+		stroke-dashoffset: 83px;
+		stroke-linecap: round;
+-webkit-animation:leftdowncircle-move 4s ease-in forwards;
+		animation: leftdowncircle-move 4s ease-in forwards;
+		}
+		@keyframes leftdowncircle-move {
+		  0% {
+		    stroke-dashoffset: 83px;
+		  }
+		  20% {
+		    stroke-dashoffset: 0px;
+		  }
+		  100% {
+		    stroke-dashoffset: 0px;
+		  }
+		}
+	.rightupcircle{
+		stroke-dasharray: 83px;
+		stroke-dashoffset: 83px;
+		stroke-linecap: round;
+-webkit-animation:rightupcircle-move 4s ease-in forwards;
+		animation: rightupcircle-move 4s ease-in forwards;
+		}
+		@keyframes rightupcircle-move {
+		  0% {
+		    stroke-dashoffset: 83px;
+		  }
+		  20% {
+		    stroke-dashoffset: 0px;
+		  }
+		  100% {
+		    stroke-dashoffset: 0px;
+		  }
+		}
+
+	.midhorizonline{
+		stroke-dasharray: 13px;
+		stroke-dashoffset: 13px;
+		stroke-linecap: round;
+-webkit-animation:midhorizonline-move 4s ease-out forwards;
+		animation: midhorizonline-move 4s ease-out forwards;
+		}
+		@keyframes midhorizonline-move {
+		  0% {
+		    stroke-dashoffset: 13px;
+		  }
+		  20% {
+		    stroke-dashoffset: 13px;
+		  }
+
+		  30% {
+		    stroke-dashoffset: 0px;
+		  }
+
+		  100% {
+		    stroke-dashoffset: 0px;
+		  }
+		}
+	.midverticalline{
+		stroke-dasharray: 13px;
+		stroke-dashoffset: 13px;
+		stroke-linecap: round;
+-webkit-animation:midverticalline-move 4s ease-out forwards;
+		animation: midverticalline-move 4s ease-out forwards;
+		}
+		@keyframes midverticalline-move {
+		  0% {
+		    stroke-dashoffset: 13px;
+		  }
+		  20% {
+		    stroke-dashoffset: 13px;
+		  }
+
+		  30% {
+		    stroke-dashoffset: 0px;
+		  }
+		  100% {
+		    stroke-dashoffset: 0px;
+		  }
+		}
+	.circle{
+		stroke-dasharray: 39px;
+		stroke-dashoffset: 39px;
+		stroke-linecap: round;
+-webkit-animation:circle-move 4s ease forwards;
+		animation: circle-move 4s ease forwards;
+		}
+		@keyframes circle-move {
+		  0% {
+		    stroke-dashoffset: 39px;
+		  }
+		  20% {
+		    stroke-dashoffset: 39px;
+		  }
+		  30% {
+		    stroke-dashoffset: 0px;
+		  }
+		  100% {
+		    stroke-dashoffset: 0px;
+		  }
+		}	
+	.triangle{
+		stroke-dasharray: 32px;
+		stroke-dashoffset: 32px;
+		stroke-linecap: round;
+-webkit-animation: triangle-move 4s ease forwards;
+		animation: triangle-move 4s ease forwards;
+		}
+		@keyframes triangle-move {
+		  0% {
+		    stroke-dashoffset: 32px;
+		  }
+		  20% {
+		    stroke-dashoffset: 32px;
+		  }
+		  30% {
+		    stroke-dashoffset: 0px;
+
+		  }
+		  100% {
+		    stroke-dashoffset: 0px;
+		  }
+		}												
+    ]]>	
+</style>
+<g >
+	<line class="leftline2" id="ll2" x1="25" y1="25" x2="2.7" y2="2.8"  stroke="#FFF" fill="none" stroke-width="3pt" ></line>
+</g>
+<g >
+	<line class="rightline2" id="rl2" x1="50.6" y1="50.6" x2="72.9" y2="72.9" stroke="#FFF" fill="none" stroke-width="3pt"></line>
+</g>
+<g>
+	<line class="rightline1" id="rl1" x1="45.3" y1="64" x2="54.2" y2="72.9" stroke="#FFF" fill="none" stroke-width="3pt"></line>
+</g>
+<g>
+	<line class="rightline3" id="rl3" x1="64.1" y1="45.4" x2="73" y2="54.3" stroke="#FFF" fill="none" stroke-width="3pt"></line>
+</g>
+<g >
+	<line class="midhorizonline" id="mhl" x1="31.6" y1="37.9" x2="44.2" y2="37.9" stroke="#FFF" fill="none" stroke-width="3pt"></line>
+</g>
+<g>
+	<line class="leftline1" id="ll1"  x1="11.7" y1="30.4"  x2="2.8" y2="21.5" stroke="#FFF" fill="none" stroke-width="3pt"></line>
+</g>
+<g >
+	<line class="leftline3" id="ll3" x1="30.3" y1="11.7" x2="21.4" y2="2.8" stroke="#FFF" fill="none" stroke-width="3pt"></line>
+</g>
+<g>
+	<line class="midverticalline" id="mvl" x1="37.9" y1="31.8" x2="37.9" y2="44.4" stroke="#FFF" fill="none" stroke-width="3pt"></line>
+</g>
+<g >
+	<path class="rightupcircle" id="ruc" d="M37.8,20.3c0-9.7,7.9-17.5,17.5-17.5s17.5,7.9,17.5,17.5s-7.9,17.5-17.5,17.5" stroke="#FFF" fill="none" stroke-width="3pt" >
+	</path>
+</g>
+<g > 
+	<path class="leftdowncircle" id="ldc" d="M37.8,55.4c0,9.7-7.9,17.5-17.5,17.5S2.7,65.1,2.7,55.4s7.9-17.5,17.5-17.5  " stroke="#FFF" fill="none" stroke-width="3pt">
+	</path>
+</g>
+<circle class="circle" id="littlecircle" cx="55.4" cy="20.3" r="6.2" stroke="#FFF" fill="none" stroke-width="3pt" >
+</circle>
+<polygon  class="triangle" id="littletriangle" points="17.86 55.76 15.38 60.05 25.59 60.05 20.48 51.21 17.86 55.76 " stroke="#FFF" fill="none" stroke-width="2.5pt" >
+</polygon>
+</svg>

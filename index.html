@@ -2,250 +2,402 @@
 <html>
 	<head lang="en-US">
 		<meta charset="UTF-8">
-		<meta http-equiv="X-US-Compatible" content="IE=edge,chrome=1">
-		<meta name="videport" content="width=device-width,user-scaleble=no,initial-scale=1.0">
+		<meta http-equiv="X-US-Compatible" content="IE=edge,chrome,safari=1">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1">
 		<link href="css/style.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa"/>
+        <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
 		<title>rendu</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.js"></script>
+        <script src="js/TweenMax.min.js"></script>
+        <script src="js/animation.gsap.js"></script>
+        <script src="js/image_filling.js"></script>
 	</head>
-<body>
-<!--    <div class="backgroundtexture"></div>-->
-	<object id="mainlogo-svg" width="78" height="78" type="image/svg+xml" data="svg/logomain.svg"></object>
-    <object id="logo2-svg" width="78" type="image/svg+xml" data="svg/LOGO2.svg"></object>
-    <div class="menubutton">
-        <tag class="part-1"></tag>
-        <tag class="part-2"></tag>
-        <tag class="part-3"></tag>
-    </div> 
-    <div id="transparent-bg"></div>
-    <div id="red-bg"></div>
-    <div class="mainmenu page">
-    <div class="mainmenu-text">
-        <div class="brief" type="display: none">
-            <p>
-                <spam style="font-weight:bold">Homepage<tag class="homepageback"></tag></spam>
-                <spam >is for curent projects</spam>
-            </p>
-            <p>
-                <spam style="font-weight:bold">Projects<tag class="projectsback"></tag></spam>
-                <spam >is for exploring more</spam>
-            </p>
-            <p>
-                <spam style="font-weight:bold">Resume<tag class="resumeback"></tag></spam>
-                <spam >is for the one who want<br /> to work with me</spam>
-            </p>
-        </div>
-        <div class="mainmenu-big">
-            <p id="projects">
-                <span class="blue-num" >01</span><br />
-                <span style="font-weight:bold" id="projects-big">Projects</span>
-            </p>
-            <p id="resume">
-                <span class="blue-num" >02</span><br />
-                <span style="font-weight:bold" id="resume-big">Resume</span>
-            </p>
-            <p id="homepage">
-                <span class="blue-num" >03</span><br />
-                <span style="font-weight:bold" id="homepage-big">Homepage</span>
-            </p>
-        </div>
-        <div class="mainmenu-program">
-            <div class="menu-line"></div>
-            <p id="program-title">Programing & Games<tag class="pgback"></tag></p>
-            <ul id="program-list">
-                <script id="programs" type="x-handlebars-template">
-                    {{#each this}}     
-                        <li  data-index= "{{id}}" class="programs-names">{{name}}</li>
-                    {{/each}}  
-                </script>
-            </ul>
-        </div>
-        <div class="mainmenu-comm">
-            <div class="menu-line"></div>
-            <p id="comm-title">Communication Design<tag class="cdback"></tag></p>
-            <ul id="comm-list">
-                <script id="comms" type="x-handlebars-template">
-                    {{#each this}}     
-                        <li data-index= "{{id}}" class="comm-names">{{name}}</li>
-                    {{/each}}  
-                </script>
-            </ul>
-        </div> 
-    </div></div>
-    
-    <div class="emailbar" >
-        <img id="emailadd" height="150px"  src="svg/gmailadd.svg" pointer-events="none">
-        <tag class="gmailback"></tag>
-        <tag  class="eangle"></tag>
-    </div>
-    <div class="navigation">
-        <div class="navigation-line"></div>
-    </div>
-    <div class="scroll-container">
-      <a class="scroll" href="#"></a>
-      <p class="small-text" id="scroll-text">scroll down</p>    
-    </div>
-    <ul class='social'>
-        <li class='youtube'>
-                <tag class="youtube-back" pointer-events="none"></tag>
-                <img class="youtube-icon" height="24px" width="24px"  src="svg/youtube.svg" pointer-events="none">
+    <body>
+        <div class="sitewrap">
+        <div class="sitecontainer">
+            <div id="notsupport"><p>please rotate</p></div>
+            <div class="sitecontent">
                 
-        </li>
-        <li class='facebook'>
-                <tag class="facebook-back" pointer-events="none"></tag>
-                 <tag class="github-back" pointer-events="none"></tag>
-                 <tag class="github-back" pointer-events="none"></tag>
-                <img class="github-icon" height="24px" width="24px"  src="svg/github.svg" pointer-events="none">
-        </li>
-        <li class='link'>
-                <tag class="link-back" pointer-events="none"></tag> 
-                <img class="link-icon" height="24px" width="24px"  src="svg/link.svg" pointer-events="none">
-        </li>
-    </ul>
-
-    <div class="homepage page" id="scene">
-        <div class="dotcontainer">
-            <ul id="homepageMenu">
-                <li  data-menuanchor="page1dot" class="homepageslide" >    
-                    <div class="navigation1">
-                    <img class="navigation-icon" data-menuanchor="page1dot" width="18.4px"  src="svg/homepageicon.svg" pointer-events="none">
-                        <tag class="homeiconback" data-menuanchor="page1dot"></tag>
-                    </div>
-                </li>
-                <li  data-menuanchor="page2dot" class="homepageslide">
-                    <div class="navigation2">
-                    <img class="navigation-icon" data-menuanchor="page2dot" width="18.4px"  src="svg/pglogo.svg" pointer-events="none">
-                        <tag class="pgiconback" data-menuanchor="page2dot"></tag>
-                    </div>   
-                </li>
-                <li  data-menuanchor="page3dot" class="homepageslide">
-                    <div class="navigation3">
-                    <img class="navigation-icon" data-menuanchor="page3dot" width="18.4px"src="svg/communicationicon.svg" pointer-events="none">
-                        <tag class="cdiconback" data-menuanchor="page3dot"></tag>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="section homepagemain" id="HOME">   
-            <div class="slide">
-            <img class="rectexture layer"  width="570px" height="570px" data-depth="0.50" src="svg/striptexture.svg" pointer-events="none" > 
-            <div class="homepage-text layer" data-depth="0.40" >
-                    <p class="title designer" font-weight= "600">
-                         <span style="color: #1B143E ;font-weight:bold" >Designer</span>
-                    </p>
-                    <p class="developer" >
-                         <span style="color: #1B143E ;font-weight:bold">Developer</span>
-                    </p>
-                    <p class="title white">    
-                         <span style="color:#1B143E ;font-weight:bold">basedin New York city.</span>
-                    </p>  
-                    <p class="title white ">
-                         <span style="color:#1B143E ;font-weight:bold">Currently focusing on</span>
-
-                    </p>
-                    <p class="title games">
-                         <span style="color:#1B143E ;font-weight:bold">creating games</span>
-                    </p>
-                    <p class="building">
-                         <span style="color:#1B143E;font-weight:bold" >Building cool stuffs</span>
-                    </p>
-                </div>   
-            <div class="homepage-text layer" data-depth="0.30">
-                    <div class="navigation-line homepage-line" ></div>
-                    <p class="title designer">
-                         <span style="color: #ed403a">Designer</span>
-                    </p>
-                    <p class="developer">
-                         <span style="color: #ed403a">Developer</span>
-                    </p>
-                    <p class="title white">    
-                         <span style="color: #ffffff">basedin New York city.</span>
-                    </p>  
-                    <p class="title white ">
-                         <span style="color: #ffffff">Currently focusing on</span>
-
-                    </p>
-                    <p class="title games">
-                         <span style="color: #0176E8">creating games</span>
-                    </p>
-                    <p class="building">
-                         <span style="color: #0176E8">Building cool stuffs</span>
-                    </p>
+                <div id="red-bg">
+                    <div id="red-bg-back"></div>
                 </div>
-            </div>    
-        </div>
-        <div class="section PGpage" id="PG">
-        </div>
-        <div class="section CDpage" id="CD">
-            <div class="CDslides">
+                <div class="menu smooth">
+                    <div class="menu-back"></div>
+                    <div class="menu-text">
+                        <p class="ids">01</p>
+                        <p class="nav" onclick="location.href='index.html';" >Homepage</p>
+                        <p class="ids">02</p>
+                        <p class="nav"><a href="#projects">Projects</a></p>
+                        <p class="ids">03</p>
+                        <p class="nav" onclick="location.href='resume.html';" >Resume</p>
+                    </div>
+</div>
+                <div class="NotMoving">
+                    <object id="logomain-svg" width="60" height="59" type="image/svg+xml" data="assets/svg/logomain.svg"></object>
+                    <div class="menubutton">
+                        <tag class="part-1"></tag>
+                        <tag class="part-2"></tag>
+                        <tag class="part-3"></tag>
+                    </div> 
+                    <div class="scroll-icon">   
+                        <div class="arrow">
+                        <svg width="20px" height="11px" viewBox="0 0 20 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="simple-line-icons" font-size="20" font-weight="normal">
+                                <g id="Desktop-HD" transform="translate(-710.000000, -2131.000000)" fill="#140F30">
+                                    <g id="scrolldown-" transform="translate(-1.000000, 2127.000000)">
+                                        <g id="Group" transform="translate(687.000000, 0.000000)">
+                                            <text id="" transform="translate(34.000000, 10.000000) rotate(180.000000) translate(-34.000000, -10.000000) ">
+                                                <tspan x="24" y="19"></tspan>
+                                            </text>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg></div>
+                    </div>
+                </div> 
+                <div id="menuback"></div>
+                <section class="pro-menu">
+                    <object id="logomain-svg" width="30" height="30" type="image/svg+xml" data="assets/svg/logomainwhite.svg"></object>
+                    <div class="menubutton2">
+                        <tag class="part-1"></tag>
+                        <tag class="part-2"></tag>
+                        <tag class="part-3"></tag>
+                    </div>             
+                </section>
+                <section class="homepage smooth">
+                    <div id="homepageBG">
+                    </div>
+                    <div id="homepage-sideBG">
+                    </div>
+                    <div class="homepage-text">
+                        <strong>
+                        <div class="title">
+                                <spam style="font-family: karla-bold;font-weight:bold;color:#140F30">REN</spam>
+                                <spam style="font-family: karla-bold;font-weight:bold;color:#4EA3A8">DU</spam>
+                        </div>
 
-            </div>    
-        </div>
-    </div>
-    
-    <div class="resumepage page">
-        <div class="resumemain">    
-        </div>
-    </div>
-    <div class="singlepage page">
-        <div class="section programspagemain">  
-            <h3> single project view</h3>
-            <img src=""/>
-        </div>
-    </div>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/jquery.svg.js "></script>
-    <script src="js/jquery.svganim.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/jquery.gsap.min.js "></script>
-    <script src="js/fullpagescroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js "></script>  
-    <script id="PG-template" type="x-handlebars-template">
-                {{#each this}} 
-                    <div class="slide" >
-                        <div class="bg-image" style='background-image:url("{{image}}")'></div>
-                        <div class="main-image">
-                            <div class="cover layer" data-depth="0.10">       
-                                <img class="cover-img layer" data-depth="0.10" data-src="{{image}}">
-                                <div class="main-sect layer" data-depth="0.10">
-                                <h3 class="sect-catlog">{{catlog}}</h3>
-                                <h3 class="sect-name">{{name}}</h3>
-                                <h3 class="sect-year">{{year}}</h3>
-                                <div class="check-out" href="#page{{id}}dot" data-index="{{id}}">
-                                    <tag class="check-out-back"></tag>
-                                    <a>check it out</a>               </div>  
-                               </div>
+                        </strong>  
+                        <div class="personal-title">
+                            <p>
+                                Freelancer since 2014 - 2018
+                            </p>
+                        </div>
+                        <div class="context">
+                            <p>
+                                <spam style="font-weight:100">I’m RenDu, comes from China and currently based at New York. A self-emplyed Designer and Artist. A super fan of Game Design, Web Design, Physical Computing</spam>
+                            </p>
+                        </div>
+                        <a class="HPB" id="portfolioBT"  href="#projects">PROJECTS</a>
+                        <button class="HPB" id="resumeBT" onclick="location.href='resume.html';" >RESUME</button>
+                    </div>
+                    <ul class="social">
+
+                        <li class="icons scan-top" id="vimeo">
+                            <tag class="icons-back" pointer-events="none"></tag>
+                            <object id="viemo-svg" width="28" data="assets/png/vimeo-logo.png"> </object>
+                        </li>
+
+                        <li class="icons scan-top" id="github">
+                            <tag class="icons-back" pointer-events="none"></tag>
+                            <object id="github-svg" width="28" data="assets/png/github-logo.png"></object>
+                        </li>
+                        <li class="icons scan-top" id="blog">
+                            <tag class="icons-back" pointer-events="none"></tag>
+                            <object id="blog-svg" width="28" data="assets/png/wordpress-logo.png"></object> 
+                        </li>           
+                    </ul>
+                    <div class="portrait-box">
+                        <div class="image">
+                            <img class="portrait-cover" src="assets/imgs/me.jpg">
+                        </div>
+                    </div>
+
+                </section>
+                <section class="phone-timeline">
+                    <ul class="timeline">
+                        <li class="pho-lines2">
+                        </li>
+                        <li class="pho-lines4">
+                        </li>
+                    </ul>
+                    <div class="phone-timeline-text smooth">
+                        <div class="PTT ptt1">
+                            <p class="PTT-title">2009</p>
+                            <p class="PTT-context">Traditional<br>Painting</p>
+                        </div>
+                        <div class="PTT ptt2">
+                            <p class="PTT-title">2011</p>
+                            <p class="PTT-context">UI/UX Design</p>
+                        </div>
+                        <div class="PTT ptt3">
+                            <p class="PTT-title">2014</p>
+                            <p class="PTT-context">Graphic Design<br>Video Editing</p>
+                        </div>
+                        <div class="PTT ptt4">
+                            <p class="PTT-title">2018</p>
+                            <p class="PTT-context">Game Design<br>Physicial Computing<br>Art Installation</p>
+                        </div>
+                    </div>
+                </section>
+                <div id="trigger" class="spacer s1"></div>
+                <div id="trigger2" class="spacer s2"></div>
+                <div class="timelinepage">
+                    <ul class="timeline">
+                        <li class="lines1">
+                        </li>
+                        <li class="lines2">
+                        </li>
+                        <li class="lines3">
+                        </li>
+                        <li class="lines4">
+                        </li>
+                        <li class="lines5">
+                        </li>
+                    </ul>
+                    <div class="horizonal layer2">
+                        <li class="lines6">
+                        </li>
+                        <ul class="circles">
+                            <li class="dots" id="dot1"></li>
+                            <li class="dots" id="dot2"></li>
+                            <li class="dots" id="dot3"></li>
+                            <li class="dots" id="dot4"></li>
+                        </ul>
+                        <ul class="years">
+                            <li class="year" id="2009">2009</li>
+                            <li class="year" id="2011">2011</li>
+                            <li class="year" id="2014">2014</li>
+                            <li class="year" id="2016">2016</li>
+                        </ul>
+                        <ul class="exps">
+                            <li class="exp" id="2009-exp">Traditional Painting</li>
+                            <li class="exp" id="2011-exp">Graphic Design<br>Video Editing</li>
+                            <li class="exp" id="2014-exp">UI/UX Design</li>
+                            <li class="exp" id="2016-exp">Game Design<br>Physicial Computing<br>Art Installation</li>
+                        </ul>
+                    </div>
+                    <div class="proTitle layer1"><p>RECENT PROJECTS</p></div>
+                </div>     
+                <a id="projects"></a>
+                <section class="projects">
+                    <div class="pros-container">
+                        <div id="trigger3" class="spacer s3"></div>
+                        <div class="item" onclick="location.href='echo.html';" style="background-color:#E6E6E6"><p>Echo</p><p class="phone-item-year">2018</p>
+                            <div class="echobg bg"></div>
+                            <div class="item-ipad-side">
+                                <div class="pro-ipad-info">
+                                <p1 class="pro-ipad-infotitle">YEAR</p1>
+                                <div id="year">
+                                    <div class="pro-contet-text smooth">2018</div>
+                                </div>       
+                                <p1 class="pro-ipad-infotitle">NAME</p1>
+                                <div id="name">
+                                    <div class="pro-contet-text smooth">Echo</div>
+                                </div>
+                                <p1 class="pro-ipad-infotitle">CREATIVE FIELDS</p1>
+                                <div id="pad-fields">
+                                <div class="pro-contet-text smooth">Soundscape Installation<br>Physicial Computing
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>                        
+                        <div class="item" onclick="location.href='keystone.html';" style="background-color:#E6E6E6"><p>Keystone:City of Portal</p><p class="phone-item-year">2017</p>
+                            <div class="portalbg bg"></div>
+                            <div class="item-ipad-side" >
+                                <div class="pro-ipad-info">
+                                <p1 class="pro-ipad-infotitle">YEAR</p1>
+                                <div id="year">
+                                    <div class="pro-contet-text smooth">2017</div>
+                                </div>       
+                                <p1 class="pro-ipad-infotitle">NAME</p1>
+                                <div id="name">
+                                    <div class="pro-contet-text smooth">Keystone:City of Portal</div>
+                                </div>
+                                <p1 class="pro-ipad-infotitle">CREATIVE FIELDS</p1>
+                                <div id="pad-fields">
+                                <div class="pro-contet-text smooth">VR Game Design <br>Physicial Computing
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                        <div class="item" onclick="location.href='ocean.html';" style="background-color:#E6E6E6"><p>OceanWorld</p><p class="phone-item-year">2017</p>
+                            <div class="oceanbg bg"></div>
+                            <div class="item-ipad-side" >
+                                <div class="pro-ipad-info">
+                                <p1 class="pro-ipad-infotitle">YEAR</p1>
+                                <div id="year">
+                                    <div class="pro-contet-text smooth">2017</div>
+                                </div>       
+                                <p1 class="pro-ipad-infotitle">NAME</p1>
+                                <div id="name">
+                                    <div class="pro-contet-text smooth">OceanWorld</div>
+                                </div>
+                                <p1 class="pro-ipad-infotitle">CREATIVE FIELDS</p1>
+                                <div id="pad-fields">
+                                <div class="pro-contet-text smooth">PC Game Design
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                        <div class="item" onclick="location.href='redboy.html';" style="background-color:#E6E6E6"><p>Red Boy</p><p class="phone-item-year">2018</p>
+                            <div class="redboybg bg"></div>
+                            <div class="item-ipad-side">
+                                <div class="pro-ipad-info">
+                                <p1 class="pro-ipad-infotitle">YEAR</p1>
+                                <div id="year">
+                                    <div class="pro-contet-text smooth">2017</div>
+                                </div>       
+                                <p1 class="pro-ipad-infotitle">NAME</p1>
+                                <div id="name">
+                                    <div class="pro-contet-text smooth">Red Boy</div>
+                                </div>
+                                <p1 class="pro-ipad-infotitle">CREATIVE FIELDS</p1>
+                                <div id="pad-fields">
+                                <div class="pro-contet-text smooth">Internet of Things <br>Physicial Computing
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+
+                        </div>
+
+                        <div class="item" onclick="location.href='joind.html';" style="background-color:#E6E6E6"><p>Joind</p><p class="phone-item-year">2017</p>
+                            <div class="USHMMbg bg"></div>
+                            <div class="item-ipad-side">
+                                <div class="pro-ipad-info">
+                                <p1 class="pro-ipad-infotitle">YEAR</p1>
+                                <div id="year">
+                                    <div class="pro-contet-text smooth">2017</div>
+                                </div>       
+                                <p1 class="pro-ipad-infotitle">NAME</p1>
+                                <div id="name">
+                                    <div class="pro-contet-text smooth">Joind</div>
+                                </div>
+                                <p1 class="pro-ipad-infotitle">CREATIVE FIELDS</p1>
+                                <div id="pad-fields">
+                                <div class="pro-contet-text smooth">Mobile Game Design <br>Text Adventure Game
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>                        
+                        <div class="item" onclick="location.href='meathead.html';" style="background-color:#E6E6E6"><p>Super Meathead</p><p class="phone-item-year">2016</p>
+                            <div class="meatboybg bg"></div>
+                            <div class="item-ipad-side">
+                                <div class="pro-ipad-info">
+                                <p1 class="pro-ipad-infotitle">YEAR</p1>
+                                <div id="year">
+                                    <div class="pro-contet-text smooth">2016</div>
+                                </div>       
+                                <p1 class="pro-ipad-infotitle">NAME</p1>
+                                <div id="name">
+                                    <div class="pro-contet-text smooth">Super Meathead</div>
+                                </div>
+                                <p1 class="pro-ipad-infotitle">CREATIVE FIELDS</p1>
+                                <div id="pad-fields">
+                                <div class="pro-contet-text smooth">Mobile Game Design 
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+
+                        <div class="item" onclick="location.href='shakerama.html';" style="background-color:#E6E6E6"><p>Shakerama</p><p class="phone-item-year">2016</p>
+                            <div class="shakebg bg"></div>
+                            <div class="item-ipad-side">
+                                <div class="pro-ipad-info">
+                                <p1 class="pro-ipad-infotitle">YEAR</p1>
+                                <div id="year">
+                                    <div class="pro-contet-text smooth">2016</div>
+                                </div>       
+                                <p1 class="pro-ipad-infotitle">NAME</p1>
+                                <div id="name">
+                                    <div class="pro-contet-text smooth">Shakerama</div>
+                                </div>
+                                <p1 class="pro-ipad-infotitle">CREATIVE FIELDS</p1>
+                                <div id="pad-fields">
+                                <div class="pro-contet-text smooth">Web Game Design <br>Internet of Things
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+
+                        <div class="item" onclick="location.href='xunxiang.html';" style="background-color:#E6E6E6"><p>Xun Xiang</p><p class="phone-item-year">2014</p>
+                            <div class="xunxiangbg bg"></div>
+                            <div class="item-ipad-side">
+                                <div class="pro-ipad-info">
+                                <p1 class="pro-ipad-infotitle">YEAR</p1>
+                                <div id="year">
+                                    <div class="pro-contet-text smooth">2014</div>
+                                </div>       
+                                <p1 class="pro-ipad-infotitle">NAME</p1>
+                                <div id="name">
+                                    <div class="pro-contet-text smooth">Xun Xiang</div>
+                                </div>
+                                <p1 class="pro-ipad-infotitle">CREATIVE FIELDS</p1>
+                                <div id="pad-fields">
+                                <div class="pro-contet-text smooth">Community Design
+                                </div>
+                            </div>
+                        </div>
                             </div>
                         </div>
                     </div>
-                {{/each}}
-    </script>
-    <script id="CD-template" type="x-handlebars-template">
-        {{#each this}}  
-             <div class="slide">
-                <div class="bg-image" style='background-image:url("{{image}}")'></div>
-                <div class="main-image">
-                    <div class="cover layer" data-depth="0.10">       
-                        <img class="cover-img layer" data-depth="0.10" data-src="{{image}}">
-                        <div class="main-sect layer" data-depth="0.10">
-                        <h3 class="sect-catlog">{{catlog}}</h3>
-                        <h3 class="sect-name">{{name}}</h3>
-                        <h3 class="sect-year">{{year}}</h3>
-                        <div class="check-out" href="#page{{id}}dot" data-index="{{id}}">
-                            <tag class="check-out-back"></tag>
-                            <a>check it out</a>               </div>  
-                       </div>
-                    </div>
-                </div>
-            </div>
-        {{/each}}
-    </script>
-    <script src="js/jquery.fullpage.js"></script>
-    <script src="js/parallax.js"></script>
-    <script src="js/mainmenu.js"></script>
-	<script src="js/logosvg.js"></script>
-    <script src="js/menuba.js"></script>
-    <script src="js/backgroundtexture.js"></script>
-    
-</body>
-</html>  
+                    <section class="proside smooth">
+                        <div class="pro-info" id="pin1">
+                            <p class="pro-infotitle">YEAR</p>
+                            <div class="scan" id="year">
+                                <div class="contet-text smooth">2018</div>
+                            </div>       
+                            <p class="pro-infotitle">NAME</p>
+                            <div class="scan" id="name">
+                                <div class="contet-text smooth">NAMES</div>
+                            </div>
+                            <p class="pro-infotitle">CREATIVE FIELDS</p>
+                            <div class="scan" id="fields">
+                                <div class="contet-text smooth">Game Design <br>Physicial Computing<br>Art Installation
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact smooth">
+                            <p id="EMAIL">EMAIL</p>
+                            <p id="email">rendu2008@gmail.com</p>    
+                            <p id="CALL">CALL</p>
+                            <p id="call">+1 201 948 8886</p>
+                              <ul id="social2">
+                                <li class="icons scan-top" id="vimeo">
+                                    <tag class="icons-back white" pointer-events="none"></tag>
+                                    <object id="viemo-svg" width="25" data="assets/png/vimeo-logowhite.png"> </object>
+                                </li>
+                                <li class="icons scan-top " id="github">
+                                    <tag class="icons-back white" pointer-events="none"></tag>
+                                    <object id="github-svg" width="25" data="assets/png/github-logowhite.png"></object>
+                                </li>
+                                <li class="icons scan-top" id="blog">
+                                    <tag class="icons-back white" pointer-events="none"></tag>
+                                    <object id="blog-svg" width="25" data="assets/png/wordpress-logowhite.png"></object> 
+                                </li>           
+                            </ul>
+                        </div>
+
+                    </section>
+                    
+                </section>
+                <section id="bottom"></section>
+        </div>
+        </div>
+        </div>
+        <script src="js/para.js"></script>
+        <script src="js/hover.js"></script>
+        
+    </body>
+</html>
