@@ -668,7 +668,8 @@ ul,li {
     -webkit-font-smoothing: antialiased;
 }
 .exp{
-    font-family: "Karla-Regular";
+    font-family: "Karla";
+    font-weight: 100;
     float:left;
     top: -10px;
     display: inline-block;
