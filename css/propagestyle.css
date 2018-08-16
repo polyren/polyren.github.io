@@ -411,7 +411,7 @@
         display: table;
         overflow: hidden;
         position: relative;
-        height: 40vh;
+        height: 46vh;
         width: 100%;
         background-color:#4EA3A8;  
     }
@@ -456,7 +456,7 @@
     }
     .PD-context{
         margin-bottom:20px;
-        font-family: "Karla-Regular";
+        font-family: "Karla";
         text-align: center;
         left: 30%;
         color:white;
