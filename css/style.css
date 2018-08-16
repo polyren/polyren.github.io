@@ -60,9 +60,8 @@ ul,li {
     position: relative;
 }
 .menu{
-    position: sticky;
+    position: fixed;
     top:0;
-    left:0;
     margin-left:auto;
     margin-right:auto;
     max-width: 1440px;
@@ -85,7 +84,8 @@ ul,li {
     max-width: 1440px;
     width: 100%;
     height:100vh;
-    background-color: rgb(20,15,48,90);
+    background-color: #140F30;
+    opacity: 0.9;
     
 }
 .menu.active{
@@ -128,22 +128,21 @@ ul,li {
 }
 
 #red-bg{
-      position: sticky;
+      position: fixed;
       top:0;
-      left:0;
       margin-left:auto;
       margin-right:auto;
       max-width: 1440px;
       z-index: 8;
       width: 100%;
       height: 0;
-
       -webkit-transition: all 900ms;
       transition: all 900ms ;
       -webkit-transform: translateY(-100vh);
               transform: translateY(-100vh);  
 }
 #red-bg-back{
+    z-index: 8;
     position: absolute;
     height:100vh;
     background-color: #FF9681;
@@ -307,7 +306,7 @@ ul,li {
     bottom:50px;
 }
 .horizonal{
-    position: absolute;
+    position: static;
     width: 100%;
     left:20;
     transform: translateY(-40px);
@@ -350,7 +349,7 @@ ul,li {
     z-index: -3;
     position: sticky;
     top:0vh;
-/*    max-width: 1440px;*/
+    max-width: 1440px;
     margin:0 auto;
     width:100%; 
     height:230px;
@@ -726,7 +725,7 @@ ul,li {
     letter-spacing: 1px;
 }
 .proTitle{
-    position:absolute;
+/*    position:absolute;*/
     color:#FFF;
     width: 100%;
     text-align: center;
