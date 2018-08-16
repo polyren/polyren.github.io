@@ -1,3 +1,11 @@
+//$(".sitewrap").css("display","block");
+
+$(window).on("load",function(){
+    $(".sitewrap").css("display","block");
+    console.log( "window loaded" );
+    
+})
+
 $(function () {
 
 function updatePageForTopImg(){
