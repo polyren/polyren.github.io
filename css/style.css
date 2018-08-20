@@ -747,7 +747,8 @@ a.svg:after {
     letter-spacing: 1px;
 }
 .proTitle{
-/*    position:absolute;*/
+    position:absolute;
+/*    transform: translateY(-30px);*/
     color:#FFF;
     width: 100%;
     text-align: center;
