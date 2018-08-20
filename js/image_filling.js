@@ -1,5 +1,5 @@
 $(window).on("load",function(){
-    $(".sitewrap").css("display","block");
+    $(".sitewrap").css("visibility","visible");
     console.log( "window loaded" );
     
 })

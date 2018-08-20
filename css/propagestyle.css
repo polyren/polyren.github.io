@@ -294,6 +294,7 @@
     position:relative;
     height:70%;
     width:calc((100% - 120px));
+
     display: inline-block;
     overflow: hidden;
     outline: none;
@@ -304,7 +305,8 @@
     display:block;
     height:40vh;
     max-height: 1024px;
-    opacity: 0.5;
+    opacity: 0.8;
+/*    width: 40vw;*/
 }
 .galary-image img.is-selected{
     opacity: 1;
