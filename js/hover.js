@@ -8,7 +8,7 @@ var menuvisual=true;
 
 var menuhash2=false;
 var menuvisual2=true;
-
+$(document).ready(function() {
 $(".item").hover(
     function(){$(this).children("p").addClass("active")},
     function(){$(this).children("p").removeClass("active")}
@@ -91,3 +91,8 @@ function menuon2(){
             $("#red-bg").addClass('active');
         }
 }
+    
+    $("#logomain-svg").click(function() {
+        console.log("asdfa");
+    });
+});

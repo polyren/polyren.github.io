@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+.chinese{
+    font-family: ‘Noto Sans TC’, sans-serif;
+}
 .promain-text {
     position: absolute;
     display: inline-block;
@@ -347,7 +351,7 @@
 
 @media only screen and (min-width : 768px) and (max-width : 1024px){
     .promain-text{
-        top: 30%;
+        bottom:0%;
         left:40px;
     }
     .promain-text .title{
@@ -382,8 +386,9 @@
         display: none;
     }
     .promain-text{
+        top: auto;
         left: 30px;
-        top: 55vh;
+        bottom:4vh;
         width: auto;
         right: 30px;
     }

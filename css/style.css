@@ -211,10 +211,27 @@ ul,li {
         animation: menubutton-move 4s ease forwards; 
 }
 #logomain-svg{
+    cursor:pointer;
     margin-left: 60px;
     margin-top: 50px;
+    width:60px;
+    height:59px;
+/*    background: url(../assets/svg/logomain.svg) no-repeat top left;*/
 }
 
+a.svg {
+  cursor:pointer;
+  position: relative;
+  display: inline-block; 
+}
+a.svg:after {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+}
 .image{
     position:absolute;
     top:0;
@@ -340,11 +357,15 @@ ul,li {
     -webkit-transition:all 0.3s;;
     transition:all 0.3s;  
 }
+.pro-menu{
+    display: none;
+}
 .pro-menu #logomain-svg{
     display: none;
-    position:fixed;
+/*    position:fixed;*/
     cursor:pointer; 
 }
+
 .timelinepage{
     z-index: -3;
     position: sticky;
@@ -904,7 +925,7 @@ ul,li {
     font-size:20px;
     letter-spacing: 0.3px;
     color: white;
-    font-family: Karla-Regular;
+    font-family: Karla;
     font-size: 20px;
     color: #FFFFFF;
     line-height: 23px;
@@ -1027,6 +1048,7 @@ ul,li {
         font-size: 15px;
         color: #140F30;
     }
+
     .homepage-text .context p{
         width: 100%;
         font-size: 1em;
@@ -1050,13 +1072,28 @@ ul,li {
         opacity: 1;
         background-color: #4EA3A8;
     }
+    .pro-menu{
+        height: auto;
+        display: block;
+    }
+    .pro-menu a{
+        z-index: 10;
+/*        background-color: aqua;*/
+        height: 30px;
+        width: 30px;
+        margin-left: 30px;
+        margin-top: 12px;
+    }
     .pro-menu #logomain-svg{
+        top:0;
         display: block;
         position:fixed;
         cursor:pointer;
-        z-index: 2;
-        margin-left: 30px;
-        margin-top: 12px
+        z-index: 0;
+        margin-left: 0px;
+        margin-top: 12px;
+        width:30px;
+        height:30px;
     }
     .menubutton2{
         display: inline-block;    
@@ -1308,7 +1345,7 @@ ul,li {
         font-size:0.9em !important;
         letter-spacing: 0.04em;
         color: white;
-        font-family: Karla-Regular;
+        font-family: Karla;
         color: #FFFFFF;
         line-height: 1.2em;
     }
