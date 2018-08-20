@@ -17,7 +17,7 @@ var controller = new ScrollMagic.Controller();
 	// build scene
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: "40%"})
 					.setTween(tween)
-					.addIndicators() // add indicators (requires plugin)
+//					.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 
     var scene2 = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "20%"})
